@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float jumpForce = 25;
+    public float jumpForce;
     public bool isJumping;
-    public float speed = 200;
+    public float speed;
     Vector2 move;
     Rigidbody2D rb;
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         rb = GetComponent<Rigidbody2D>();
-        
-
     }
-
-    // Update is called once per frame
     void Update()
     {
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -25,8 +19,7 @@ public class Player : MonoBehaviour
     }
 
     void FixedUpdate() {
-        //rb.AddForce(move * speed * Time.deltaTime); //Movimentação envolvendo atrito
-        rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y); //Movimentação envolvendo movimento comum.
+        rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
     }
 
     void Jump(){

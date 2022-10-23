@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     public float jumpForce;
     public bool isJumping;
     public float speed;
-    Vector2 move;
+    public bool jumpPressed;
+    public int move;
     Rigidbody2D rb;
     void Start()
     {
@@ -15,18 +16,19 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Jump();
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
     }
-
-    void Jump()
+    public void JumpPress(bool jumpButtonPressed){
+        jumpPressed = jumpButtonPressed;
+    }
+    public void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (jumpPressed)
         {
             if (isJumping == false)
             {
@@ -51,5 +53,8 @@ public class Player : MonoBehaviour
         {
             isJumping = true;
         }
+    }
+    public void TouchHorizontal(int moveDirection){
+        move = moveDirection;
     }
 }

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/back.png-f1c9bb31950ae56354cfbe16cdd6eef5.stex"
+path="res://.import/rock.png-b52742db2309dbef9c6b1f7fa93ab834.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fase1/Backgrounds/back.png"
-dest_files=[ "res://.import/back.png-f1c9bb31950ae56354cfbe16cdd6eef5.stex" ]
+source_file="res://Sprites/Fase1/fase1-floresta/props/rock.png"
+dest_files=[ "res://.import/rock.png-b52742db2309dbef9c6b1f7fa93ab834.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

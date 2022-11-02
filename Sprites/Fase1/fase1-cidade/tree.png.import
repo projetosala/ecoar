@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset.png-b313719362da31ebdf340d2021ff6168.stex"
+path="res://.import/tree.png-0613418ef55ec734c7a61964a71c4f8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tilesets/tileset.png"
-dest_files=[ "res://.import/tileset.png-b313719362da31ebdf340d2021ff6168.stex" ]
+source_file="res://Sprites/Fase1/fase1-cidade/tree.png"
+dest_files=[ "res://.import/tree.png-0613418ef55ec734c7a61964a71c4f8d.stex" ]
 
 [params]
 

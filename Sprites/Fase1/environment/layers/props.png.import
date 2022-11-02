@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vine.png-d510e46da6863a6bb54e92b27c88a46a.stex"
+path="res://.import/props.png-e4a5d84da0a9eb315760bc35109284ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fase1/fase1-floresta/props/vine.png"
-dest_files=[ "res://.import/vine.png-d510e46da6863a6bb54e92b27c88a46a.stex" ]
+source_file="res://Sprites/Fase1/environment/layers/props.png"
+dest_files=[ "res://.import/props.png-e4a5d84da0a9eb315760bc35109284ef.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

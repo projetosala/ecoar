@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/house.png-5dec7ade26c18a3f424474a0ab4cfd60.stex"
+path="res://.import/vine.png-82e6619a5d62fcdd88c6581cc42c4c15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fase1/fase1-floresta/props/house.png"
-dest_files=[ "res://.import/house.png-5dec7ade26c18a3f424474a0ab4cfd60.stex" ]
+source_file="res://Sprites/Fase1/environment/props/vine.png"
+dest_files=[ "res://.import/vine.png-82e6619a5d62fcdd88c6581cc42c4c15.stex" ]
 
 [params]
 

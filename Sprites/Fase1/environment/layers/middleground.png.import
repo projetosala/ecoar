@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/middleground.png-08e87936377c284c3ef03325ea2f5709.stex"
+path="res://.import/middleground.png-4dddc352b1536e143fc141952fed61f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fase1/fase1-floresta/layers/middleground.png"
-dest_files=[ "res://.import/middleground.png-08e87936377c284c3ef03325ea2f5709.stex" ]
+source_file="res://Sprites/Fase1/environment/layers/middleground.png"
+dest_files=[ "res://.import/middleground.png-4dddc352b1536e143fc141952fed61f2.stex" ]
 
 [params]
 

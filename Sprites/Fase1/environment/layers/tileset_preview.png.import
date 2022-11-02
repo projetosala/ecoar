@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bush.png-610f8af3a740308a4f6b90858864ac0a.stex"
+path="res://.import/tileset_preview.png-5d93a3ae3125f5a3f2709d49f58236ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fase1/fase1-cidade/bush.png"
-dest_files=[ "res://.import/bush.png-610f8af3a740308a4f6b90858864ac0a.stex" ]
+source_file="res://Sprites/Fase1/environment/layers/tileset_preview.png"
+dest_files=[ "res://.import/tileset_preview.png-5d93a3ae3125f5a3f2709d49f58236ea.stex" ]
 
 [params]
 

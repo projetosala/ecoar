@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 10, 95.5 )
+
+[node name="limit" type="StaticBody2D"]
+
+[node name="limitCollision" type="CollisionShape2D" parent="."]
+position = Vector2( -94, 114.5 )
+z_index = 2
+shape = SubResource( 33 )

@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/Tilesets/bush.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Tilesets/tree.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Tilesets/house.png" type="Texture" id=4]
-[ext_resource path="res://UI/grey-buttons/Back.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/limit.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Fase1/Backgrounds/back.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
 
@@ -70,29 +70,6 @@ tile_data = PoolIntArray( -589779, 1, 0, -524248, 0, 0, -524233, 0, 0, -262103, 
 position = Vector2( 80, 0 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="Buttons" type="Node2D" parent="Player"]
-position = Vector2( -80, 0 )
-
-[node name="Left" type="TouchScreenButton" parent="Player/Buttons"]
-position = Vector2( -120, 60 )
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 5 )
-action = "ui_left"
-
-[node name="Right" type="TouchScreenButton" parent="Player/Buttons"]
-position = Vector2( 0, 111.25 )
-rotation = 3.14159
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 5 )
-action = "ui_right"
-
-[node name="Jump" type="TouchScreenButton" parent="Player/Buttons"]
-position = Vector2( 280, 60 )
-rotation = 1.5708
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 5 )
-action = "ui_up"
-
 [node name="Backgrounds" type="Node2D" parent="."]
 
 [node name="Back" type="Sprite" parent="Backgrounds"]
@@ -118,3 +95,6 @@ position = Vector2( 1920, 89 )
 scale = Vector2( 2, 3 )
 z_index = -6
 texture = ExtResource( 6 )
+
+[node name="limit" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9, -144 )

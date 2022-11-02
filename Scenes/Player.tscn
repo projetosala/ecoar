@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Sprites/Player/idle/idle3.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Player/idle/idle1.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Sprites/Player/jump/jump2.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Player/fall/fall2.png" type="Texture" id=25]
 [ext_resource path="res://UI/grey-buttons/Back.png" type="Texture" id=26]
+[ext_resource path="res://UI/grey-buttons/BackPressed.png" type="Texture" id=27]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -59,7 +60,6 @@ script = ExtResource( 21 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "jump"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -77,6 +77,7 @@ position = Vector2( -80, 0 )
 position = Vector2( -128, 64 )
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
+pressed = ExtResource( 27 )
 action = "ui_left"
 
 [node name="Right" type="TouchScreenButton" parent="Camera2D/Buttons"]
@@ -84,6 +85,7 @@ position = Vector2( -8, 112 )
 rotation = 3.14159
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
+pressed = ExtResource( 27 )
 action = "ui_right"
 
 [node name="Jump" type="TouchScreenButton" parent="Camera2D/Buttons"]
@@ -91,4 +93,5 @@ position = Vector2( 272, 64 )
 rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
+pressed = ExtResource( 27 )
 action = "ui_up"

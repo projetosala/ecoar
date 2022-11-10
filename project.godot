@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Detection_Area",
+"language": "GDScript",
+"path": "res://Enemies/DetectionArea.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Enemies/Enemy.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scenes/Scripts/Player/Player.gd"
+} ]
+_global_script_class_icons={
+"Detection_Area": "",
+"Enemy": "",
+"Player": ""
+}
+
 [application]
 
 config/name="2d-game"
@@ -26,6 +48,13 @@ common/drop_mouse_on_gui_input_disabled=true
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_2="Player"
+2d_physics/layer_3="World"
+2d_physics/layer_4="Enemies"
+2d_physics/layer_5="Props"
 
 [physics]
 

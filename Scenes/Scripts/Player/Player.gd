@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+class_name Player
 
 var motion = Vector2()
 const up = Vector2(0,-1)

@@ -1,7 +1,7 @@
 # Boas-vindas ao nosso jogo 2D 👋
 
 ## - Sobre o Projeto
-- Nesse projeto, nós criaremos um jogo 2d, onde o personagem desembarca em mapas que representam algumas cidade históricas alagoanas e nos ajuda a entender mais sobre a fauna e a flora desses lugares de alagoas. 
+- Nesse projeto, nós criaremos um jogo 2d, onde o personagem desembarca em mapas que representam algumas cidade históricas alagoanas e nos ajuda a entender mais sobre a fauna e a flora desses lugares.
 ## - Tecnologias Utilizadas
 - Utlizamos a Godot Engine, gdscript e azprite
 ## - O que foi feito até agora

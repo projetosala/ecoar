@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="2d-game"
-run/main_scene="res://Scenes/fase1-cidade.tscn"
+run/main_scene="res://Assets/1-Maravilha/1-Cidade.tscn"
 config/icon="res://icon.png"
 
 [display]

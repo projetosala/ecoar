@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/middle.png-0fe000aa31331abf99217c1c022ee03f.stex"
+path="res://.import/house-2.png-cfaf8c36de6bc9927830d529e7d66614.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1-Maravilha/Tiles/01/middle.png"
-dest_files=[ "res://.import/middle.png-0fe000aa31331abf99217c1c022ee03f.stex" ]
+source_file="res://Assets/1-Maravilha/Tiles/01/house-2.png"
+dest_files=[ "res://.import/house-2.png-cfaf8c36de6bc9927830d529e7d66614.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/middle.png-0fe000aa31331abf99217c1c022ee03f.stex"
+path="res://.import/placa_maravilha.png-46572d9ea284166733f4872e1a2bf59d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1-Maravilha/Tiles/01/middle.png"
-dest_files=[ "res://.import/middle.png-0fe000aa31331abf99217c1c022ee03f.stex" ]
+source_file="res://Assets/1-Maravilha/Tiles/01/placa_maravilha.png"
+dest_files=[ "res://.import/placa_maravilha.png-46572d9ea284166733f4872e1a2bf59d.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

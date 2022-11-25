@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+signal sla
 var motion = Vector2()
 const up = Vector2(0,-1)
 const gravity = 20

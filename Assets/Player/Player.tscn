@@ -60,6 +60,7 @@ script = ExtResource( 21 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "jump"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -67,9 +68,9 @@ position = Vector2( -4, 5 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2( 0, -33 )
+offset = Vector2( 0, -48 )
 current = true
-zoom = Vector2( 0.4, 0.4 )
+zoom = Vector2( 0.45, 0.45 )
 smoothing_speed = 0.2
 
 [node name="Buttons" type="Node2D" parent="Camera2D"]

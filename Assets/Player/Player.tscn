@@ -60,29 +60,24 @@ script = ExtResource( 21 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "jump"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4, 5 )
 shape = SubResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2( 0, -48 )
-current = true
-zoom = Vector2( 0.45, 0.45 )
-smoothing_speed = 0.2
-
-[node name="Buttons" type="Node2D" parent="Camera2D"]
+[node name="Buttons" type="Node2D" parent="."]
 position = Vector2( -80, 0 )
 
-[node name="Left" type="TouchScreenButton" parent="Camera2D/Buttons"]
+[node name="Left" type="TouchScreenButton" parent="Buttons"]
 position = Vector2( -120, 27 )
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
 pressed = ExtResource( 27 )
 action = "ui_left"
 
-[node name="Right" type="TouchScreenButton" parent="Camera2D/Buttons"]
+[node name="Right" type="TouchScreenButton" parent="Buttons"]
 position = Vector2( 0, 78 )
 rotation = 3.14159
 scale = Vector2( 0.15, 0.15 )
@@ -90,10 +85,16 @@ normal = ExtResource( 26 )
 pressed = ExtResource( 27 )
 action = "ui_right"
 
-[node name="Jump" type="TouchScreenButton" parent="Camera2D/Buttons"]
+[node name="Jump" type="TouchScreenButton" parent="Buttons"]
 position = Vector2( 280, 32 )
 rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
 pressed = ExtResource( 27 )
 action = "ui_up"
+
+[node name="Camera" type="Camera2D" parent="."]
+offset = Vector2( 0, -48 )
+current = true
+zoom = Vector2( 0.45, 0.45 )
+smoothing_speed = 1.0

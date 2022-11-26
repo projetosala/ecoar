@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-signal sla
 var motion = Vector2()
 const up = Vector2(0,-1)
 const gravity = 20
@@ -9,6 +8,7 @@ const max_speed = 130
 const jump_height = -500
 
 func _physics_process(delta):
+	print(get_node("Camera").offset)
 	motion.y += gravity
 	var friction = false
 	if Input.is_action_pressed("ui_right"):

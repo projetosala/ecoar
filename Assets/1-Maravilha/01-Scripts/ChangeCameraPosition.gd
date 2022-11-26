@@ -13,9 +13,6 @@ func _on_ChangeCameraPosition_body_entered(body):
 			yield(get_tree().create_timer(0.000001), "timeout")
 			camera.offset.y += 4.5
 			buttons.position.y += 4.5
-			
-			
-
 func _on_ChangeCameraPosition_body_exited(body):
 	bodySaiu = true
 	if body.is_in_group("player"):

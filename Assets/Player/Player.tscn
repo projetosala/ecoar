@@ -52,9 +52,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 22 )
+extents = Vector2( 8, 25.3572 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( -8, -1 )
 script = ExtResource( 21 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -64,7 +65,7 @@ frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -4, 5 )
+position = Vector2( -4, -1.35715 )
 shape = SubResource( 2 )
 
 [node name="Buttons" type="Node2D" parent="."]
@@ -86,7 +87,7 @@ pressed = ExtResource( 27 )
 action = "ui_right"
 
 [node name="Jump" type="TouchScreenButton" parent="Buttons"]
-position = Vector2( 280, 32 )
+position = Vector2( 280, 24 )
 rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 26 )
@@ -96,5 +97,5 @@ action = "ui_up"
 [node name="Camera" type="Camera2D" parent="."]
 offset = Vector2( 0, -48 )
 current = true
-zoom = Vector2( 0.45, 0.45 )
+zoom = Vector2( 0.43, 0.43 )
 smoothing_speed = 1.0

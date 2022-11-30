@@ -4,9 +4,9 @@ var canMove = true
 var motion = Vector2()
 const up = Vector2(0,-1)
 const gravity = 20
-const acceleration = 30
-const max_speed = 130
-const jump_height = -500
+export var acceleration = 30
+export var max_speed = 130
+export var jump_height = -500
 
 func _physics_process(delta):
 	motion.y += gravity

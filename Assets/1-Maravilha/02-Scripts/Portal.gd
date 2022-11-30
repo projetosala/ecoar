@@ -6,5 +6,5 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body.name == "Player":
-			SceneTransition.change_scene("dissolve")
+			SceneTransition.change_scene("dissolve2")
 			get_tree().change_scene(world_scene)

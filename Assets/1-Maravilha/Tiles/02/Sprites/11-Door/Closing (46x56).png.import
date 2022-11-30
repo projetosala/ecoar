@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quadro.png-1650434960c563c3470d24131963f5d2.stex"
+path="res://.import/Closing (46x56).png-2cfc0eb77205e22e11adb0632a267476.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1-Maravilha/Tiles/02/quadro.png"
-dest_files=[ "res://.import/quadro.png-1650434960c563c3470d24131963f5d2.stex" ]
+source_file="res://Assets/1-Maravilha/Tiles/02/Sprites/11-Door/Closing (46x56).png"
+dest_files=[ "res://.import/Closing (46x56).png-2cfc0eb77205e22e11adb0632a267476.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

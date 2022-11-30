@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 265.5, 173 )
+
+[node name="ChangeCameraPosition" type="Area2D"]
+position = Vector2( 2869, -82 )
+z_index = 3
+collision_layer = 16385
+collision_mask = 16385
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 255.5, 101 )
+z_index = 3
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_ChangeCameraPosition_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_ChangeCameraPosition_body_exited"]

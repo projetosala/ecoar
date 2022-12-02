@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Localization/translation_service.gd"
 }, {
+"base": "Area2D",
+"class": "Detection_Area",
+"language": "GDScript",
+"path": "res://Assets/Utils/Enemies/DetectionArea.gd"
+}, {
 "base": "Node",
 "class": "Dialogic",
 "language": "GDScript",
@@ -64,6 +69,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
+"base": "Area2D",
+"class": "HitBox",
+"language": "GDScript",
+"path": "res://Assets/Utils/Enemies/HitBox.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
@@ -71,6 +81,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "DTS": "",
+"Detection_Area": "",
 "Dialogic": "",
 "DialogicAnimaPropertiesHelper": "",
 "DialogicAnimaResources": "",
@@ -81,6 +92,7 @@ _global_script_class_icons={
 "DialogicResources": "",
 "DialogicUtil": "",
 "HistoryRow": "",
+"HitBox": "",
 "Player": ""
 }
 

@@ -13,17 +13,15 @@ var hitted = false
 
 func removeHeart(life):
 	if life == 2:
-		pass
-		#$heart3.play("heart_black")
+		$heart.play("heart_black")
 	elif life == 1:
 		pass
-		#$heart2.play("heart_black")
+		$heart2.play("heart_black")
 	else:
-		#$heart.play("heart_black")
+		$heart3.play("heart_black")
 		get_tree().reload_current_scene()
 		
 func _physics_process(delta):
-	print(life)
 	motion.y += gravity
 	var friction = false
 	if canMove == true:

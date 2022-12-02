@@ -1,14 +1,29 @@
 extends KinematicBody2D
-
+class_name Player
 var canMove = true
+
 var motion = Vector2()
 const up = Vector2(0,-1)
 const gravity = 20
 export var acceleration = 30
 export var max_speed = 130
 export var jump_height = -500
+var life = 3
+var hitted = false
 
+func removeHeart(life):
+	if life == 2:
+		pass
+		#$heart3.play("heart_black")
+	elif life == 1:
+		pass
+		#$heart2.play("heart_black")
+	else:
+		#$heart.play("heart_black")
+		get_tree().reload_current_scene()
+		
 func _physics_process(delta):
+	print(life)
 	motion.y += gravity
 	var friction = false
 	if canMove == true:

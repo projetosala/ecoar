@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/4.png" type="Texture" id=16]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/1.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Utils/Enemies/Patrulheiro.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=19]
 [ext_resource path="res://Assets/Utils/MovingPlatforms/movingPlataform-left-right.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/cave.png" type="Texture" id=21]
 
@@ -611,9 +612,11 @@ tracks/0/keys = {
 1/z_index = 0
 
 [node name="1-Caatinga" type="Node2D"]
+script = ExtResource( 19 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -318.0 ]
 }
+scene = "res://Assets/1-Maravilha/1-Caatinga.tscn"
 
 [node name="Enemy" parent="." instance=ExtResource( 18 )]
 position = Vector2( 2013, -282 )

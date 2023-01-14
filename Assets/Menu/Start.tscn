@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Fonts/rainyhearts.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Menu/Start.gd" type="Script" id=3]
+
+[sub_resource type="Theme" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_color = Color( 0.992157, 0.956863, 0.956863, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Start" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.121569, 0.0470588, 0.0470588, 0.517647 )
+
+[node name="controls" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -46.0
+margin_top = -47.5
+margin_right = 46.0
+margin_bottom = 51.5
+
+[node name="StartEnter" type="Button" parent="controls"]
+margin_top = -30.0
+margin_right = 92.0
+margin_bottom = -1.0
+rect_scale = Vector2( 2, 2 )
+focus_neighbour_top = NodePath("../quitEnter")
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+text = "start"
+
+[node name="quitEnter" type="Button" parent="controls"]
+margin_top = 33.0
+margin_right = 92.0
+margin_bottom = 62.0
+rect_scale = Vector2( 2, 2 )
+focus_neighbour_bottom = NodePath("../StartEnter")
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+text = "quit"
+
+[connection signal="pressed" from="controls/StartEnter" to="." method="_on_StartEnter_pressed"]
+[connection signal="pressed" from="controls/quitEnter" to="." method="_on_quitEnter_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Player/Sprites/run/run11.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/tileset.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=18]
+[ext_resource path="res://Assets/1-Maravilha/01-Scripts/PrimeiraFase.gd" type="Script" id=19]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/montanha.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Player/Sprites/run/run5.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Player/Sprites/run/run12.png" type="Texture" id=22]
@@ -56,7 +57,7 @@ animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 42 ), ExtResource( 25 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "idle",
-"speed": 8.0
+"speed": 4.0
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
 "loop": true,
@@ -85,6 +86,8 @@ extents = Vector2( 12, 10 )
 extents = Vector2( 265.5, 173 )
 
 [node name="1-Cidade" type="Node"]
+script = ExtResource( 19 )
+scene = "res://Assets/1-Maravilha/1-Cidade.tscn"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -157,6 +160,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 1 )
 animation = "jump"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

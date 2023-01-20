@@ -108,7 +108,6 @@ SceneTransition="*res://Assets/Utils/ChangeArea/SceneTransition.tscn"
 
 [display]
 
-window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep_height"
 
@@ -144,6 +143,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_6="HurtBox"
 2d_physics/layer_7="HitBox"
 2d_physics/layer_8="HurtBox2"
+2d_physics/layer_9="Preguica"
 
 [physics]
 

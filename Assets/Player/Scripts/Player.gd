@@ -11,6 +11,8 @@ export var jump_height = -500
 var life = 3
 var hitted = false
 
+
+
 func removeHeart(life):
 	if life == 2:
 		$heart.play("heart_black")
@@ -51,4 +53,6 @@ func _physics_process(delta):
 				motion.x = lerp(motion.x, 0,0.05)
 	motion = move_and_slide(motion, up)
 	
+
+
 

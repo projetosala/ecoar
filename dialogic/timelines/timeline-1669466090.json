@@ -1,0 +1,45 @@
+{
+	"events": [
+		{
+			"character": "character-1669466058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ei, explorador! Eu preciso da sua ajuda."
+		},
+		{
+			"character": "character-1669466145.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "O quê?! Uma estátua falando?"
+		},
+		{
+			"character": "character-1669466058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sou uma preguiça gigante, não uma estátua."
+		},
+		{
+			"character": "character-1669466145.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Como assim? No que você precisa da minha ajuda?"
+		},
+		{
+			"character": "character-1669466058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Animais do seu tempo, que são de Alagoas se perderam no período pré-histórico. Volte pro passado e resgate eles! "
+		},
+		{
+			"character": "character-1669466058.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Vá ao museu da cidade, e procure por um buraco e pule nele!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1669466090.json",
+		"name": "Dialogo-Preguica"
+	}
+}

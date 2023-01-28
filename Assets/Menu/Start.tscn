@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Fonts/rainyhearts.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Menu/Start.gd" type="Script" id=3]
 
 [sub_resource type="Theme" id=2]
@@ -33,20 +33,17 @@ margin_right = 46.0
 margin_bottom = 51.5
 
 [node name="StartEnter" type="Button" parent="controls"]
-margin_top = -30.0
 margin_right = 92.0
-margin_bottom = -1.0
-rect_scale = Vector2( 2, 2 )
+margin_bottom = 26.0
 focus_neighbour_top = NodePath("../quitEnter")
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 1 )
 text = "start"
 
 [node name="quitEnter" type="Button" parent="controls"]
-margin_top = 33.0
+margin_top = 30.0
 margin_right = 92.0
-margin_bottom = 62.0
-rect_scale = Vector2( 2, 2 )
+margin_bottom = 56.0
 focus_neighbour_bottom = NodePath("../StartEnter")
 theme = SubResource( 2 )
 custom_fonts/font = SubResource( 1 )

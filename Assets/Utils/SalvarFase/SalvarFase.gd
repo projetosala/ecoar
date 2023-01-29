@@ -6,3 +6,4 @@ func _ready():
 		Save.local['scene'] = scene
 		Save.save_local()
 		print("Salva " + Save.local['scene'])
+	$CityBanner.visible = true

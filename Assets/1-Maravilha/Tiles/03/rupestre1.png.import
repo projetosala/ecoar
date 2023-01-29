@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/List.png-0bb3507fd4ef555b7ae57766c1782361.stex"
+path="res://.import/rupestre1.png-1afe63b3413a580ac0c26cb337e939cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/UI/move-buttons/List.png"
-dest_files=[ "res://.import/List.png-0bb3507fd4ef555b7ae57766c1782361.stex" ]
+source_file="res://Assets/1-Maravilha/Tiles/03/rupestre1.png"
+dest_files=[ "res://.import/rupestre1.png-1afe63b3413a580ac0c26cb337e939cc.stex" ]
 
 [params]
 

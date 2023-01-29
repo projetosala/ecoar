@@ -49,6 +49,8 @@ func _physics_process(delta):
 				$AnimatedSprite.play("jump")
 			if friction == true:
 				motion.x = lerp(motion.x, 0,0.05)
+		if Input.is_action_pressed("ui_home"):
+			get_tree().change_scene("res://Assets/Menu/Start.tscn")
 	motion = move_and_slide(motion, up)
 	
 

@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	$controls/StartEnter.grab_focus()
-
 
 func _on_StartEnter_pressed():
 	var file = File.new()
@@ -13,5 +10,10 @@ func _on_StartEnter_pressed():
 	else:
 		get_tree().change_scene("res://Assets/1-Maravilha/1-Cidade.tscn")
 
-func _on_quitEnter_pressed():
+
+func _on_CreditsEnter_pressed():
+	get_tree().change_scene("res://Assets/Menu/Creditos.tscn")
+
+
+func _on_QuitEnter_pressed():
 	get_tree().quit()

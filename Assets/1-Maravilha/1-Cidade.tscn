@@ -174,7 +174,6 @@ action = "ui_home"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 1 )
 animation = "jump"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -272,8 +271,8 @@ scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 3 )
 
 [node name="Busao" type="Sprite" parent="Cenario"]
-position = Vector2( 88, 80 )
-scale = Vector2( 0.14, 0.14 )
+position = Vector2( 86, 98 )
+scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 5 )
 
 [node name="Escada" type="Sprite" parent="Cenario"]

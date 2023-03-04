@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barraco3.png-dea0e45d82f9112bb0482e7cab61e1a0.stex"
+path="res://.import/casa2.png-1ccf6314e53b413aed726ddf7d126ec6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2-Arapiraca/Tiles/01/barraco3.png"
-dest_files=[ "res://.import/barraco3.png-dea0e45d82f9112bb0482e7cab61e1a0.stex" ]
+source_file="res://Assets/2-Arapiraca/Tiles/01/casa2.png"
+dest_files=[ "res://.import/casa2.png-1ccf6314e53b413aed726ddf7d126ec6.stex" ]
 
 [params]
 

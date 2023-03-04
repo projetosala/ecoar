@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barraco2.png-19fca53ec993512b12fbcaf0182eb2ee.stex"
+path="res://.import/casa1.png-92dbdef6832596c09b5cbcb73eb96894.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2-Arapiraca/Tiles/01/barraco2.png"
-dest_files=[ "res://.import/barraco2.png-19fca53ec993512b12fbcaf0182eb2ee.stex" ]
+source_file="res://Assets/2-Arapiraca/Tiles/01/casa1.png"
+dest_files=[ "res://.import/casa1.png-92dbdef6832596c09b5cbcb73eb96894.stex" ]
 
 [params]
 

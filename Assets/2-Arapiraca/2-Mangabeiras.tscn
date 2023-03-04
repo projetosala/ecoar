@@ -19,9 +19,9 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=17]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=18]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/casa.png" type="Texture" id=19]
-[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/barraco3.png" type="Texture" id=20]
-[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/barraco2.png" type="Texture" id=21]
-[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/barraco1.png" type="Texture" id=22]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/casa1.png" type="Texture" id=20]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/casa2.png" type="Texture" id=21]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/casa3.png" type="Texture" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -408,7 +408,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 6
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.png-30eff5d67e92c286f60fbae773136bce.stex"
+path="res://.import/lixo_inimigo2.png-0b862b025ea227b3c1daa28235d431df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png"
-dest_files=[ "res://.import/1.png-30eff5d67e92c286f60fbae773136bce.stex" ]
+source_file="res://Assets/2-Arapiraca/Tiles/01/lixo_inimigo/lixo_inimigo2.png"
+dest_files=[ "res://.import/lixo_inimigo2.png-0b862b025ea227b3c1daa28235d431df.stex" ]
 
 [params]
 

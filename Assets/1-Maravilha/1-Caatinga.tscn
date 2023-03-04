@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 6/6.png" type="Texture" id=15]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/4.png" type="Texture" id=16]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/1.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Utils/Enemies/Patrulheiro.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig2.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=19]
 [ext_resource path="res://Assets/Utils/MovingPlatforms/movingPlataform-left-right.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/cave.png" type="Texture" id=21]
@@ -27,6 +27,30 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre2.png" type="Texture" id=25]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre3.png" type="Texture" id=26]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre1.png" type="Texture" id=27]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig1.png" type="Texture" id=28]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig4.png" type="Texture" id=29]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig3.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Utils/Enemies/Enemy.gd" type="Script" id=31]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 15.5, 8 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 18 ), ExtResource( 30 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "walk",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 13.3333, 7.33333 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 2.5, 6 )
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 2.5, 6.21875 )
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -88,19 +112,19 @@ points = PoolVector2Array( 16, 0, 16, 0, 0, 16, 0, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=60]
 points = PoolVector2Array( 16, 16, 0, 16, 16, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=61]
 points = PoolVector2Array( 0, 16, 0, 8, 14, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=62]
 points = PoolVector2Array( 0, 0, 16, 8, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=63]
 points = PoolVector2Array( 16, 0, 16, 16, 0, 16, 0, 8, 14, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=25]
+[sub_resource type="ConvexPolygonShape2D" id=64]
 points = PoolVector2Array( 16, 16, 0, 16, 16, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
@@ -268,31 +292,31 @@ points = PoolVector2Array( 0, 0, 16, 0, 14, 6, 10, 8, 0, 16 )
 "autotile_coord": Vector2( 14, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 60 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 17, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 61 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 16, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 62 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 14, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 63 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 13, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 64 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 17, 6 ),
@@ -726,19 +750,129 @@ __meta__ = {
 }
 scene = "res://Assets/1-Maravilha/1-Caatinga.tscn"
 
-[node name="Enemy" parent="." instance=ExtResource( 18 )]
+[node name="Enemy" type="KinematicBody2D" parent="."]
 position = Vector2( 2013, -282 )
 scale = Vector2( 2, 2 )
 collision_layer = 8
 collision_mask = 3
+script = ExtResource( 31 )
 speed = 100
 
-[node name="Enemy2" parent="." instance=ExtResource( 18 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2( -0.5, 9 )
+shape = SubResource( 21 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy"]
+frames = SubResource( 22 )
+animation = "walk"
+frame = 2
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 23 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( -6, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 24 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 3, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 25 )
+
+[node name="Enemy2" type="KinematicBody2D" parent="."]
 position = Vector2( 2957, -541 )
 scale = Vector2( 2, 2 )
 collision_layer = 8
 collision_mask = 3
+script = ExtResource( 31 )
 speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+position = Vector2( -0.5, 9 )
+shape = SubResource( 21 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy2"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy2"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy2"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy2"]
+frames = SubResource( 22 )
+animation = "walk"
+frame = 2
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy2"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy2/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 23 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy2"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( -6, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy2/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 24 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy2"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 3, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy2/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 25 )
 
 [node name="terrain" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
@@ -1062,3 +1196,10 @@ anims/entrada = SubResource( 2 )
 tile_set = SubResource( 59 )
 format = 1
 tile_data = PoolIntArray( -393114, 3, 0, -327601, 3, 0, -327597, 2, 0, -327586, 2, 0, -262064, 1, 0, -262054, 2, 0, -262047, 3, 0, -196558, 1, 0, -196552, 1, 0, -196549, 3, 0, -196508, 1, 0, -196505, 3, 0, -131019, 2, 0, -131017, 3, 0, -131009, 2, 0, -131003, 3, 0, -131001, 1, 0, -130999, 2, 0, -130977, 1, 0, -65475, 1, 0, -65438, 1, 0, -65434, 0, 0 )
+
+[connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy/HurtBox2" to="Enemy" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy2/HitBox" to="Enemy2" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy2/HurtBox" to="Enemy2" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy2/HurtBox2" to="Enemy2" method="_on_HurtBox2_body_entered"]

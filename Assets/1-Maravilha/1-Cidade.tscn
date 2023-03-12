@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/tileset.png" type="Texture" id=2]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/placa_maravilha.png" type="Texture" id=3]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/house.png" type="Texture" id=4]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/busao.png" type="Texture" id=5]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=5]
 [ext_resource path="res://Assets/1-Maravilha/Tilesets/1-Cidade.tres" type="TileSet" id=6]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/house-4.png" type="Texture" id=7]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/preguica.png" type="Texture" id=8]
@@ -174,7 +174,6 @@ action = "ui_home"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 1 )
 animation = "jump"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -271,7 +270,7 @@ position = Vector2( 280, 48 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 3 )
 
-[node name="Busao" type="Sprite" parent="Cenario"]
+[node name="Van" type="Sprite" parent="Cenario"]
 position = Vector2( 86, 98 )
 scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 5 )

@@ -1,0 +1,9 @@
+[
+	{"name": "Guia", "text": "Olá, seja bem-vindo ao museu de Maravilha. Você quer conhecer mais sobre a cidade?"},
+	{"name": "Turista", "text": "Sim."},
+	{"name": "Guia", "text": "Maravilha é uma cidade com muitos fósseis de animais pré-históricos."},
+	{"name": "Turista", "text": "Oh, sério?"},
+	{"name": "Guia", "text": "Sim, nessa região, há muitos anos atrás, animais como a Preguiça-Gigante, Tigre dente de sabre e Tatu gigante viviam aqui."},
+	{"name": "Turista", "text": "Esses animais realmente viviam por aqui?"},
+    {"name": "Guia", "text": "Durante seu tuor pelo museu, você vai ter certeza disso!"}
+]

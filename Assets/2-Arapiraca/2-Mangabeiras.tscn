@@ -550,7 +550,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -613,7 +613,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -743,7 +743,7 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 5
+frame = 4
 playing = true
 
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/banquinhos.png" type="Texture" id=15]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/lojinha.png" type="Texture" id=16]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/rua.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=19]
 
 [sub_resource type="TileSet" id=10]
 0/name = "palmeira.png 0"
@@ -180,6 +182,7 @@ extents = Vector2( 9, 243 )
 0/z_index = 0
 
 [node name="2-Bosque" type="Node2D"]
+script = ExtResource( 19 )
 
 [node name="tree-arapiraca3" type="TileMap" parent="."]
 z_index = -4
@@ -408,3 +411,6 @@ tile_set = SubResource( 18 )
 cell_size = Vector2( 2, 2 )
 format = 1
 tile_data = PoolIntArray( 2490174, 0, 0, 2490198, 0, 0, 2490222, 0, 0, 2490246, 0, 0, 2490269, 0, 0, 2490293, 0, 0, 2490317, 0, 0, 2490341, 0, 0, 2490365, 0, 0, 2424853, 0, 0, 2424877, 0, 0, 2424901, 0, 0, 2424925, 0, 0, 2424949, 0, 0, 2424973, 0, 0, 2424997, 0, 0, 2425021, 0, 0, 2425045, 0, 0, 2425069, 0, 0, 2425093, 0, 0, 2425117, 0, 0, 2425141, 0, 0, 2425165, 0, 0, 2425189, 0, 0, 2425213, 0, 0, 2425237, 0, 0, 2425261, 0, 0, 2425285, 0, 0, 2425308, 0, 0, 2425332, 0, 0, 2425356, 0, 0, 2425380, 0, 0, 2425404, 0, 0, 2425428, 0, 0, 2425452, 0, 0, 2425476, 0, 0, 2425500, 0, 0, 2425524, 0, 0, 2425548, 0, 0, 2425572, 0, 0, 2425596, 0, 0, 2425620, 0, 0, 2425644, 0, 0, 2425668, 0, 0, 2425692, 0, 0, 2425716, 0, 0, 2425739, 0, 0, 2425763, 0, 0, 2425787, 0, 0, 2425811, 0, 0, 2425834, 0, 0, 2425858, 0, 0, 2425882, 0, 0, 2425906, 0, 0, 2425930, 0, 0, 2425953, 0, 0, 2425977, 0, 0, 2426001, 0, 0, 2426025, 0, 0, 2426048, 0, 0, 2426072, 0, 0, 2426096, 0, 0, 2426120, 0, 0 )
+
+[node name="CityBanner" parent="." instance=ExtResource( 18 )]
+texto = "Bosque - Arapiraca"

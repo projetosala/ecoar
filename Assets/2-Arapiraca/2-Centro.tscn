@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/02/loja5.png" type="Texture" id=14]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/02/loja4.png" type="Texture" id=15]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/02/igreja.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 8, 0, 8, 48, 8, 48, 46, 0, 46 )
@@ -200,6 +202,8 @@ extents = Vector2( 9, 243 )
 extents = Vector2( 9, 243 )
 
 [node name="2-Centro" type="Node2D"]
+script = ExtResource( 18 )
+scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 264, 120 )
@@ -318,3 +322,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limit2"]
 position = Vector2( 13, -203 )
 shape = SubResource( 7 )
+
+[node name="CityBanner" parent="." instance=ExtResource( 17 )]
+texto = "Centro - Arapiraca"

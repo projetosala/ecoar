@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -37,6 +37,8 @@
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=35]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca2.png" type="Texture" id=36]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca1.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=39]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -456,6 +458,8 @@ animations = [ {
 } ]
 
 [node name="2-Mangabeiras" type="Node"]
+script = ExtResource( 39 )
+scene = "res://Assets/2-Arapiraca/2-Mangabeiras.tscn"
 
 [node name="terrain" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
@@ -550,7 +554,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -613,7 +617,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -743,8 +747,11 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 4
+frame = 6
 playing = true
+
+[node name="CityBanner" parent="." instance=ExtResource( 38 )]
+texto = "Mangabeiras - Arapiraca"
 
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]

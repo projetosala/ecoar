@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 export(String, FILE, "*.tscn") var scene
 func _ready():
 	var file = File.new()

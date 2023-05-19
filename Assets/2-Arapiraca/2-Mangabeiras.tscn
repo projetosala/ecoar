@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -37,6 +37,11 @@
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=35]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca2.png" type="Texture" id=36]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca1.png" type="Texture" id=37]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=39]
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 97.75, 43.5 )
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -457,6 +462,24 @@ animations = [ {
 
 [node name="2-Mangabeiras" type="Node"]
 
+[node name="ChangeArea" parent="." instance=ExtResource( 39 )]
+position = Vector2( 1917, 55 )
+scale = Vector2( 2, 2 )
+world_scene = "res://Assets/2-Arapiraca/2-Mangabeiras.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeArea"]
+position = Vector2( 37.25, 27.5 )
+shape = SubResource( 36 )
+
+[node name="ChangeArea2" parent="." instance=ExtResource( 39 )]
+position = Vector2( 3474, -105 )
+scale = Vector2( 2, 2 )
+world_scene = "res://Assets/2-Arapiraca/2-Mangabeiras.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeArea2"]
+position = Vector2( 37.25, 27.5 )
+shape = SubResource( 36 )
+
 [node name="terrain" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
 tile_set = SubResource( 18 )
@@ -473,7 +496,7 @@ format = 1
 tile_data = PoolIntArray( -2490103, 2, 0, -2293405, 1, 0, -1244993, 3, 0, -524336, 2, 0, -262235, 1, 0, -327624, 1, 0, -327582, 5, 0, -327564, 4, 0, -196605, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 156, 26 )
+position = Vector2( 112, 38 )
 collision_layer = 11
 collision_mask = 225
 
@@ -550,7 +573,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -584,6 +607,319 @@ collision_mask = 2
 position = Vector2( 10.5, 0 )
 shape = SubResource( 30 )
 
+[node name="Enemy3" type="KinematicBody2D" parent="."]
+position = Vector2( 1503, -101 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy3"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy3"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy3"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy3"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy3"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy3/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy3"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy3/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy3"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy3/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy4" type="KinematicBody2D" parent="."]
+position = Vector2( 1595, -102 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy4"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy4"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy4"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy4"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy4"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy4/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy4"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy4/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy4"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy4/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy5" type="KinematicBody2D" parent="."]
+position = Vector2( 1731, -175 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy5"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy5"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy5"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy5"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy5"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 6
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy5"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy5/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy5"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy5/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy5"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy5/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy6" type="KinematicBody2D" parent="."]
+position = Vector2( 1144, -110 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy6"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy6"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy6"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy6"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy6"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 6
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy6"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy6/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy6"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy6/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy6"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy6/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy7" type="KinematicBody2D" parent="."]
+position = Vector2( 2107, -218 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy7"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy7"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy7"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy7"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy7"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 5
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy7"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy7/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy7"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy7/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy7"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy7/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
 [node name="Enemy2" type="KinematicBody2D" parent="."]
 position = Vector2( 3048, -234 )
 scale = Vector2( 2, 2 )
@@ -613,7 +949,6 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -644,6 +979,320 @@ collision_layer = 128
 collision_mask = 2
 
 [node name="Collision2" type="CollisionShape2D" parent="Enemy2/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy8" type="KinematicBody2D" parent="."]
+position = Vector2( 3149, -232 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy8"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy8"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy8"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy8"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy8"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy8"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy8/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy8"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy8/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy8"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -2, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy8/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy9" type="KinematicBody2D" parent="."]
+position = Vector2( 2850, -239 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy9"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy9"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy9"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy9"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy9"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 6
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy9"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy9/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy9"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy9/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy9"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -2, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy9/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy10" type="KinematicBody2D" parent="."]
+position = Vector2( 2982, -235 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy10"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy10"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy10"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy10"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy10"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 5
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy10"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy10/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy10"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy10/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy10"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -2, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy10/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy11" type="KinematicBody2D" parent="."]
+position = Vector2( 2930, -237 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy11"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy11"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy11"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy11"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy11"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 5
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy11"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy11/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy11"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy11/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy11"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -2, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy11/HurtBox2"]
+position = Vector2( 10.5, 0 )
+shape = SubResource( 30 )
+
+[node name="Enemy12" type="KinematicBody2D" parent="."]
+position = Vector2( 3268, -216 )
+scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 6 )
+speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy12"]
+position = Vector2( 0, 9 )
+shape = SubResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy12"]
+
+[node name="RayCast2D_wall" type="RayCast2D" parent="Enemy12"]
+position = Vector2( -1, 6 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( -16, 0 )
+
+[node name="RayCast_floor" type="RayCast2D" parent="Enemy12"]
+position = Vector2( 0, 3 )
+enabled = true
+cast_to = Vector2( 0, 24 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy12"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 27 )
+animation = "walk"
+frame = 5
+playing = true
+
+[node name="HitBox" type="Area2D" parent="Enemy12"]
+modulate = Color( 0, 1, 0.0431373, 1 )
+position = Vector2( 0, -2 )
+scale = Vector2( 0.75, 0.75 )
+collision_layer = 64
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Enemy12/HitBox"]
+position = Vector2( 0, -3.33333 )
+shape = SubResource( 28 )
+
+[node name="HurtBox" type="Area2D" parent="Enemy12"]
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+position = Vector2( 0, 5 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="Collision1" type="CollisionShape2D" parent="Enemy12/HurtBox"]
+position = Vector2( -10.5, 0 )
+shape = SubResource( 29 )
+
+[node name="HurtBox2" type="Area2D" parent="Enemy12"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -2, 5 )
+collision_layer = 128
+collision_mask = 2
+
+[node name="Collision2" type="CollisionShape2D" parent="Enemy12/HurtBox2"]
 position = Vector2( 10.5, 0 )
 shape = SubResource( 30 )
 
@@ -743,14 +1392,49 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 4
+frame = 1
 playing = true
+
+[node name="Van" type="Sprite" parent="."]
+position = Vector2( -116, 45 )
+scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 38 )
 
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox2" to="Enemy" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy3/HitBox" to="Enemy3" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy3/HurtBox" to="Enemy3" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy3/HurtBox2" to="Enemy3" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy4/HitBox" to="Enemy4" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy4/HurtBox" to="Enemy4" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy4/HurtBox2" to="Enemy4" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy5/HitBox" to="Enemy5" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy5/HurtBox" to="Enemy5" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy5/HurtBox2" to="Enemy5" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy6/HitBox" to="Enemy6" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy6/HurtBox" to="Enemy6" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy6/HurtBox2" to="Enemy6" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy7/HitBox" to="Enemy7" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy7/HurtBox" to="Enemy7" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy7/HurtBox2" to="Enemy7" method="_on_HurtBox2_body_entered"]
 [connection signal="body_entered" from="Enemy2/HitBox" to="Enemy2" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy2/HurtBox" to="Enemy2" method="_on_HurtBox_body_entered"]
 [connection signal="body_entered" from="Enemy2/HurtBox2" to="Enemy2" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy8/HitBox" to="Enemy8" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy8/HurtBox" to="Enemy8" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy8/HurtBox2" to="Enemy8" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy9/HitBox" to="Enemy9" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy9/HurtBox" to="Enemy9" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy9/HurtBox2" to="Enemy9" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy10/HitBox" to="Enemy10" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy10/HurtBox" to="Enemy10" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy10/HurtBox2" to="Enemy10" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy11/HitBox" to="Enemy11" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy11/HurtBox" to="Enemy11" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy11/HurtBox2" to="Enemy11" method="_on_HurtBox2_body_entered"]
+[connection signal="body_entered" from="Enemy12/HitBox" to="Enemy12" method="_on_HitBox_body_entered"]
+[connection signal="body_entered" from="Enemy12/HurtBox" to="Enemy12" method="_on_HurtBox_body_entered"]
+[connection signal="body_entered" from="Enemy12/HurtBox2" to="Enemy12" method="_on_HurtBox2_body_entered"]
 [connection signal="body_entered" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_exited"]

@@ -1,102 +1,104 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=56 format=2]
 
-[ext_resource path="res://Assets/Player/Sprites/run/run11.png" type="Texture" id=1]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/tileset.png" type="Texture" id=2]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/placa_maravilha.png" type="Texture" id=3]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/house.png" type="Texture" id=4]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=5]
-[ext_resource path="res://Assets/1-Maravilha/Tilesets/1-Cidade.tres" type="TileSet" id=6]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/house-4.png" type="Texture" id=7]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/praça.png" type="Texture" id=8]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/preguica-estatua.png" type="Texture" id=9]
+[ext_resource path="res://Assets/1-Maravilha/Tilesets/1-Cidade.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/5.png" type="Texture" id=2]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/montanha.png" type="Texture" id=3]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/igreja.png" type="Texture" id=8]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=9]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/prefeitura.png" type="Texture" id=10]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/museu.png" type="Texture" id=11]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/placaMuseu.png" type="Texture" id=12]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/igreja.png" type="Texture" id=13]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/1.png" type="Texture" id=14]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/5.png" type="Texture" id=15]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=18]
-[ext_resource path="res://Assets/1-Maravilha/01-Scripts/PrimeiraFase.gd" type="Script" id=19]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/montanha.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Player/Sprites/run/run5.png" type="Texture" id=21]
-[ext_resource path="res://Assets/Player/Sprites/run/run12.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Player/Sprites/run/run2.png" type="Texture" id=23]
-[ext_resource path="res://Assets/Player/Sprites/run/run1.png" type="Texture" id=24]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle5.png" type="Texture" id=25]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/banco.png" type="Texture" id=12]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/house-4.png" type="Texture" id=13]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/placaMuseu.png" type="Texture" id=14]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/praça.png" type="Texture" id=15]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/placa_maravilha.png" type="Texture" id=16]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/tileset.png" type="Texture" id=17]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=18]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/house.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Player/Scripts/Player.gd" type="Script" id=20]
+[ext_resource path="res://Assets/Player/Sprites/idle/idle6.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Player/Sprites/idle/idle4.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Player/Sprites/idle/idle5.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Player/Sprites/idle/idle2.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Player/Sprites/idle/idle1.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Player/Sprites/idle/idle3.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle2.png" type="Texture" id=27]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle6.png" type="Texture" id=28]
-[ext_resource path="res://Assets/Player/UI/move-buttons/BackPressed.png" type="Texture" id=29]
-[ext_resource path="res://Assets/Player/Sprites/run/run6.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle1.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Player/Sprites/jump/jump2.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Player/Sprites/jump/jump1.png" type="Texture" id=33]
-[ext_resource path="res://Assets/Player/Sprites/run/run13.png" type="Texture" id=34]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Back.png" type="Texture" id=35]
-[ext_resource path="res://Assets/Player/Sprites/run/run8.png" type="Texture" id=36]
-[ext_resource path="res://Assets/Player/Sprites/run/run9.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Player/Sprites/fall/fall2.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Player/Sprites/fall/fall1.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Player/Sprites/jump/jump1.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Player/UI/move-buttons/Back.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Player/UI/move-buttons/Pause.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Player/UI/move-buttons/BackPressed.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Player/Sprites/jump/jump2.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Player/Sprites/run/run1.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Player/Sprites/run/run11.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Player/Sprites/run/run10.png" type="Texture" id=37]
 [ext_resource path="res://Assets/Player/Sprites/run/run14.png" type="Texture" id=38]
-[ext_resource path="res://Assets/Player/Sprites/run/run7.png" type="Texture" id=39]
-[ext_resource path="res://Assets/Player/Sprites/run/run4.png" type="Texture" id=40]
-[ext_resource path="res://Assets/Player/Sprites/run/run10.png" type="Texture" id=41]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle4.png" type="Texture" id=42]
-[ext_resource path="res://Assets/Player/Sprites/run/run3.png" type="Texture" id=43]
-[ext_resource path="res://Assets/Player/Scripts/Player.gd" type="Script" id=44]
-[ext_resource path="res://Assets/Player/Sprites/fall/fall1.png" type="Texture" id=45]
-[ext_resource path="res://Assets/Player/Sprites/fall/fall2.png" type="Texture" id=46]
-[ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=47]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=48]
-[ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/DialogueBox.tscn" type="PackedScene" id=49]
-[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=50]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Pause.png" type="Texture" id=51]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/01/banco.png" type="Texture" id=52]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 45 ), ExtResource( 46 ) ],
-"loop": true,
-"name": "fall",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 42 ), ExtResource( 25 ), ExtResource( 28 ) ],
-"loop": true,
-"name": "idle",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 32 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 24 ), ExtResource( 23 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 21 ), ExtResource( 30 ), ExtResource( 39 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 41 ), ExtResource( 1 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 38 ) ],
-"loop": true,
-"name": "run",
-"speed": 12.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 25.3572 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 59.6154, 48.0769 )
+[ext_resource path="res://Assets/Player/Sprites/run/run4.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Player/Sprites/run/run2.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Player/Sprites/run/run9.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Player/Sprites/run/run3.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Player/Sprites/run/run7.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Player/Sprites/run/run5.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Player/Sprites/run/run13.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Player/Sprites/run/run12.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Player/Sprites/run/run6.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Player/Sprites/run/run8.png" type="Texture" id=48]
 
 [sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 106.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 176, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 81 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.5, 98 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 265.5, 173 )
 
-[node name="1-Cidade" type="Node"]
-script = ExtResource( 19 )
-scene = "res://Assets/1-Maravilha/1-Cidade.tscn"
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "fall",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8, 25.3572 )
+
+[node name="1-Cidade-2" type="Node"]
+
+[node name="ChangeArea2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6416, 87 )
+world_scene = "res://Assets/2-Arapiraca/2-Mangabeiras.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeArea2"]
+position = Vector2( 0, -32.5 )
+shape = SubResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -106,7 +108,7 @@ motion_mirroring = Vector2( 576, 324 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
 position = Vector2( 516, -1 )
-texture = ExtResource( 14 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1152, 648 )
 
@@ -117,7 +119,7 @@ motion_mirroring = Vector2( 576, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds1"]
 position = Vector2( 310, -17 )
-texture = ExtResource( 15 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 576, 324 )
 
@@ -128,7 +130,7 @@ motion_mirroring = Vector2( 576, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds3"]
 position = Vector2( 312, -23 )
-texture = ExtResource( 15 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 576, 324 )
 
@@ -139,7 +141,7 @@ motion_mirroring = Vector2( 576, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds2"]
 position = Vector2( 111, 81 )
-texture = ExtResource( 16 )
+texture = ExtResource( 9 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1152, 324 )
 
@@ -152,85 +154,13 @@ motion_mirroring = Vector2( 345.6, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Middle"]
 position = Vector2( 252, 39 )
 scale = Vector2( 2.4, 2.4 )
-texture = ExtResource( 20 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 576, 96 )
 
-[node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( 191, 100 )
-z_index = 3
-collision_layer = 16385
-collision_mask = 16385
-script = ExtResource( 44 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Menu" type="TouchScreenButton" parent="Player"]
-position = Vector2( 153, -163 )
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 51 )
-action = "ui_home"
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
-frames = SubResource( 1 )
-animation = "jump"
-frame = 1
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -4, -1.35715 )
-shape = SubResource( 2 )
-
-[node name="InteractButton" type="Node2D" parent="Player"]
-visible = false
-position = Vector2( -25, -1 )
-
-[node name="Interact" type="TouchScreenButton" parent="Player/InteractButton"]
-position = Vector2( 184, -16 )
-scale = Vector2( 0.1, 0.1 )
-z_index = 4
-normal = ExtResource( 48 )
-action = "ui_accept"
-
-[node name="MovementButtons" type="Node2D" parent="Player"]
-position = Vector2( -80, -6 )
-
-[node name="Left" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( -120, 27 )
-scale = Vector2( 0.15, 0.15 )
-z_index = 5
-normal = ExtResource( 35 )
-pressed = ExtResource( 29 )
-action = "ui_left"
-
-[node name="Right" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( 0, 78 )
-rotation = 3.14159
-scale = Vector2( 0.15, 0.15 )
-z_index = 5
-normal = ExtResource( 35 )
-pressed = ExtResource( 29 )
-action = "ui_right"
-
-[node name="Jump" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( 280, 24 )
-rotation = 1.5708
-scale = Vector2( 0.15, 0.15 )
-z_index = 5
-normal = ExtResource( 35 )
-pressed = ExtResource( 29 )
-action = "ui_up"
-
-[node name="Camera" type="Camera2D" parent="Player"]
-offset = Vector2( 0, -48 )
-current = true
-zoom = Vector2( 0.43, 0.43 )
-smoothing_speed = 1.0
-
 [node name="Floor" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_tile_origin = 1
 format = 1
@@ -239,7 +169,7 @@ tile_data = PoolIntArray( -196488, 12, 21, -196487, 12, 22, -65551, 4, 0, -13104
 [node name="Background" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
 z_index = -2
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -196494, 12, 0, -196493, 12, 1, -196492, 12, 1, -196491, 12, 1, -196490, 12, 1, -196489, 12, 2, -131044, 4, 0, -131039, 4, 0, -130990, 7, 0, -130986, 4, 0, -130980, 4, 0, -130958, 12, 65536, -10, 3, 0, -6, 3, 0, -65518, 3, 0, -65422, 12, 65536, -65388, 3, 0, -65385, 3, 0, 114, 12, 65536, 65563, 3, 0, 65588, 5, 0, 65649, 12, 1, 65650, 12, 65554, 65709, 3, 0, 131100, 3, 0, 131116, 3, 0, 131138, 3, 0, 131139, 3, 0, 131180, 12, 65536, 131245, 3, 0, 131251, 3, 0, 196649, 3, 0, 196671, 3, 0, 196680, 3, 0, 196682, 3, 0, 196707, 3, 0, 196710, 3, 0, 196713, 3, 0, 196716, 12, 65536, 196766, 3, 0, 196773, 3, 0, 196787, 3, 0, 196794, 3, 0, 196803, 3, 0, 196817, 3, 0, 196825, 3, 0, 196828, 3, 0, 196839, 3, 0, 196849, 3, 0, 196859, 3, 0, 327674, 2, 0, 327677, 2, 0, 262184, 3, 0, 262185, 3, 0, 262187, 3, 0, 262208, 3, 0, 262244, 3, 0, 262247, 3, 0, 262252, 12, 65536, 262286, 3, 0, 262312, 2, 0, 262314, 3, 0, 262316, 3, 0, 262317, 2, 0, 262318, 2, 0, 262319, 2, 0, 262320, 2, 0, 262321, 2, 0, 262322, 2, 0, 262323, 2, 0, 262324, 2, 0, 262325, 2, 0, 262326, 2, 0, 262327, 2, 0, 262328, 2, 0, 262331, 3, 0, 262332, 2, 0, 262333, 2, 0, 262375, 3, 0, 327780, 3, 0, 327788, 12, 65536, 393324, 12, 65536, 458860, 12, 65536 )
@@ -250,38 +180,38 @@ tile_data = PoolIntArray( -196494, 12, 0, -196493, 12, 1, -196492, 12, 1, -19649
 position = Vector2( 1376, 32 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -1
-texture = ExtResource( 4 )
+texture = ExtResource( 19 )
 flip_h = true
 
 [node name="House2" type="Sprite" parent="Cenario"]
 position = Vector2( 1394, 16 )
 scale = Vector2( 1.51724, 1.40741 )
 z_index = -2
-texture = ExtResource( 4 )
+texture = ExtResource( 19 )
 flip_h = true
 
 [node name="House3" type="Sprite" parent="Cenario"]
 position = Vector2( 1919, 36 )
 scale = Vector2( 1.51724, 1.40741 )
 z_index = -2
-texture = ExtResource( 4 )
+texture = ExtResource( 19 )
 flip_h = true
 
 [node name="PlacaMaravilha" type="Sprite" parent="Cenario"]
 position = Vector2( 280, 48 )
 scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 3 )
+texture = ExtResource( 16 )
 
 [node name="Van" type="Sprite" parent="Cenario"]
 position = Vector2( 86, 98 )
 scale = Vector2( 0.55, 0.55 )
-texture = ExtResource( 5 )
+texture = ExtResource( 18 )
 
 [node name="Escada" type="Sprite" parent="Cenario"]
 position = Vector2( 1454, 107 )
 scale = Vector2( 1.612, -2.617 )
 z_index = -2
-texture = ExtResource( 2 )
+texture = ExtResource( 17 )
 region_enabled = true
 region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 
@@ -289,7 +219,7 @@ region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 position = Vector2( 1454, 102 )
 scale = Vector2( 1.612, -2.617 )
 z_index = -2
-texture = ExtResource( 2 )
+texture = ExtResource( 17 )
 region_enabled = true
 region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 
@@ -297,7 +227,7 @@ region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 position = Vector2( 1454, 96 )
 scale = Vector2( 1.612, -2.617 )
 z_index = -2
-texture = ExtResource( 2 )
+texture = ExtResource( 17 )
 region_enabled = true
 region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 
@@ -305,7 +235,7 @@ region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 position = Vector2( 1454, 93 )
 scale = Vector2( 1.612, -2.617 )
 z_index = -2
-texture = ExtResource( 2 )
+texture = ExtResource( 17 )
 region_enabled = true
 region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 
@@ -313,36 +243,12 @@ region_rect = Rect2( 345.882, 249.771, 25.9032, 2.71983 )
 position = Vector2( 1509, 11 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -2
-texture = ExtResource( 7 )
-
-[node name="Preguica" type="Sprite" parent="Cenario"]
-position = Vector2( 4316, 45 )
-scale = Vector2( 0.8, 0.8 )
-z_index = 1
-texture = ExtResource( 8 )
-
-[node name="Preguica3" type="KinematicBody2D" parent="Cenario/Preguica"]
-position = Vector2( 91.2495, 88.75 )
-scale = Vector2( 1.625, 1.625 )
-
-[node name="DialogueBox" parent="Cenario/Preguica/Preguica3" instance=ExtResource( 49 )]
-
-[node name="Sprite" type="Sprite" parent="Cenario/Preguica/Preguica3"]
-position = Vector2( 64.6162, -20.7692 )
-scale = Vector2( 1.3, 1.3 )
-texture = ExtResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="Cenario/Preguica/Preguica3"]
-script = ExtResource( 47 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Preguica/Preguica3/Area2D"]
-position = Vector2( 58.8462, -22.6923 )
-shape = SubResource( 8 )
+texture = ExtResource( 13 )
 
 [node name="Preguica2" type="Sprite" parent="Cenario"]
 position = Vector2( 4621, 45 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 8 )
+texture = ExtResource( 15 )
 
 [node name="Prefeitura" type="Sprite" parent="Cenario"]
 position = Vector2( 5472, 32 )
@@ -358,93 +264,93 @@ texture = ExtResource( 11 )
 position = Vector2( -22, 14 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 1
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 
 [node name="Igreja" type="Sprite" parent="Cenario"]
 position = Vector2( 5728, -79 )
 scale = Vector2( 3, 3 )
-texture = ExtResource( 13 )
+texture = ExtResource( 8 )
 
 [node name="Montanha-background" type="Sprite" parent="Cenario"]
 position = Vector2( 3220, 319 )
 scale = Vector2( 113.75, 41.6653 )
 z_index = -4
-texture = ExtResource( 20 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 129.969, 83.3837, 8.11409, 9.23328 )
 
-[node name="ChangeArea" parent="Cenario" instance=ExtResource( 17 )]
+[node name="ChangeArea" parent="Cenario" instance=ExtResource( 6 )]
 position = Vector2( 3088, 128 )
 collision_layer = 3
 world_scene = "res://Assets/1-Maravilha/1-Cidade.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/ChangeArea"]
 position = Vector2( 112, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="Cadeira" type="Sprite" parent="Cenario"]
 position = Vector2( 4193, 110 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1
-texture = ExtResource( 52 )
+texture = ExtResource( 12 )
 
 [node name="Cadeira2" type="Sprite" parent="Cenario"]
 position = Vector2( 4247, 110 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1
-texture = ExtResource( 52 )
+texture = ExtResource( 12 )
 
 [node name="Cadeira3" type="Sprite" parent="Cenario"]
 position = Vector2( 4643, 108 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1
-texture = ExtResource( 52 )
+texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Cadeira4" type="Sprite" parent="Cenario"]
 position = Vector2( 4697, 108 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1
-texture = ExtResource( 52 )
+texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Cadeira5" type="Sprite" parent="Cenario"]
 position = Vector2( 4751, 108 )
 scale = Vector2( 0.7, 0.7 )
 z_index = 1
-texture = ExtResource( 52 )
+texture = ExtResource( 12 )
 flip_h = true
 
 [node name="limite" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limite"]
 position = Vector2( 0, 71 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="limite2" type="StaticBody2D" parent="."]
 position = Vector2( 6360, 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="limite2"]
-position = Vector2( 0, 71 )
-shape = SubResource( 5 )
+position = Vector2( -359.5, 42 )
+shape = SubResource( 1 )
 
 [node name="Areas" type="Node2D" parent="."]
 
-[node name="ChangeArea" parent="Areas" instance=ExtResource( 17 )]
+[node name="ChangeArea" parent="Areas" instance=ExtResource( 6 )]
 position = Vector2( 5994, 72 )
 world_scene = "res://Assets/1-Maravilha/1-Museu.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/ChangeArea"]
 position = Vector2( -5, -22 )
 z_index = 1
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="ChangeCameraPosition" type="Area2D" parent="Areas"]
 position = Vector2( 2869, -82 )
 z_index = 3
 collision_layer = 16385
 collision_mask = 16385
-script = ExtResource( 18 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -454,12 +360,86 @@ position = Vector2( 255.5, 101 )
 z_index = 3
 shape = SubResource( 3 )
 
-[node name="CityBanner" parent="." instance=ExtResource( 50 )]
+[node name="CityBanner" parent="." instance=ExtResource( 7 )]
 layer = 2
 visible = false
 texto = "Maravilha - Alagoas"
 
-[connection signal="body_entered" from="Cenario/Preguica/Preguica3/Area2D" to="Cenario/Preguica/Preguica3/Area2D" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Cenario/Preguica/Preguica3/Area2D" to="Cenario/Preguica/Preguica3/Area2D" method="_on_Area2D_body_exited"]
+[node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
+position = Vector2( 6063, 77 )
+z_index = 3
+collision_layer = 16385
+collision_mask = 16385
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Menu" type="TouchScreenButton" parent="Player"]
+position = Vector2( 153, -163 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 32 )
+action = "ui_home"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+frames = SubResource( 5 )
+animation = "jump"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -4, -1.35715 )
+shape = SubResource( 6 )
+
+[node name="InteractButton" type="Node2D" parent="Player"]
+visible = false
+position = Vector2( -25, -1 )
+
+[node name="Interact" type="TouchScreenButton" parent="Player/InteractButton"]
+position = Vector2( 184, -16 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 4
+normal = ExtResource( 29 )
+action = "ui_accept"
+
+[node name="MovementButtons" type="Node2D" parent="Player"]
+position = Vector2( -80, -6 )
+
+[node name="Left" type="TouchScreenButton" parent="Player/MovementButtons"]
+position = Vector2( -120, 27 )
+scale = Vector2( 0.15, 0.15 )
+z_index = 5
+normal = ExtResource( 31 )
+pressed = ExtResource( 33 )
+action = "ui_left"
+
+[node name="Right" type="TouchScreenButton" parent="Player/MovementButtons"]
+position = Vector2( 0, 78 )
+rotation = 3.14159
+scale = Vector2( 0.15, 0.15 )
+z_index = 5
+normal = ExtResource( 31 )
+pressed = ExtResource( 33 )
+action = "ui_right"
+
+[node name="Jump" type="TouchScreenButton" parent="Player/MovementButtons"]
+position = Vector2( 280, 24 )
+rotation = 1.5708
+scale = Vector2( 0.15, 0.15 )
+z_index = 5
+normal = ExtResource( 31 )
+pressed = ExtResource( 33 )
+action = "ui_up"
+
+[node name="Camera" type="Camera2D" parent="Player"]
+offset = Vector2( 0, -48 )
+current = true
+zoom = Vector2( 0.43, 0.43 )
+smoothing_speed = 1.0
+
+[node name="Van" type="Sprite" parent="."]
+position = Vector2( 6419, 94 )
+scale = Vector2( 0.55, 0.55 )
+texture = ExtResource( 18 )
+
 [connection signal="body_entered" from="Areas/ChangeCameraPosition" to="Areas/ChangeCameraPosition" method="_on_ChangeCameraPosition_body_entered"]
 [connection signal="body_exited" from="Areas/ChangeCameraPosition" to="Areas/ChangeCameraPosition" method="_on_ChangeCameraPosition_body_exited"]

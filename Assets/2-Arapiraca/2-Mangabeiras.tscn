@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_scene load_steps=71 format=2]
-=======
-[gd_scene load_steps=70 format=2]
->>>>>>> 83a3e0abb331e0d67f6385b77288d2782b339002
 
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -41,16 +37,11 @@
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=35]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca2.png" type="Texture" id=36]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca1.png" type="Texture" id=37]
-<<<<<<< HEAD
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=38]
 [ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=39]
 
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 97.75, 43.5 )
-=======
-[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=38]
-[ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=39]
->>>>>>> 83a3e0abb331e0d67f6385b77288d2782b339002
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -470,8 +461,6 @@ animations = [ {
 } ]
 
 [node name="2-Mangabeiras" type="Node"]
-script = ExtResource( 39 )
-scene = "res://Assets/2-Arapiraca/2-Mangabeiras.tscn"
 
 [node name="ChangeArea" parent="." instance=ExtResource( 39 )]
 position = Vector2( 1917, 55 )
@@ -584,11 +573,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-<<<<<<< HEAD
-frame = 1
-=======
-frame = 2
->>>>>>> 83a3e0abb331e0d67f6385b77288d2782b339002
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -651,6 +636,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy3"]
@@ -713,6 +699,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy4"]
@@ -775,7 +762,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 6
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy5"]
@@ -838,7 +825,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 6
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy6"]
@@ -901,7 +888,6 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy7"]
@@ -964,10 +950,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-<<<<<<< HEAD
-=======
-frame = 1
->>>>>>> 83a3e0abb331e0d67f6385b77288d2782b339002
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -1030,6 +1013,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy8"]
@@ -1092,7 +1076,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 6
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy9"]
@@ -1155,7 +1139,6 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy10"]
@@ -1218,7 +1201,6 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy11"]
@@ -1281,7 +1263,6 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy12"]
@@ -1411,21 +1392,13 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-<<<<<<< HEAD
-frame = 1
+frame = 3
 playing = true
 
 [node name="Van" type="Sprite" parent="."]
 position = Vector2( -116, 45 )
 scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 38 )
-=======
-frame = 6
-playing = true
-
-[node name="CityBanner" parent="." instance=ExtResource( 38 )]
-texto = "Mangabeiras - Arapiraca"
->>>>>>> 83a3e0abb331e0d67f6385b77288d2782b339002
 
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]

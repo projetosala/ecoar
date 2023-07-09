@@ -45,6 +45,9 @@ func next_script():
 	
 
 func _on_Timer_timeout():
+	var barco = get_parent().get_parent().get_node("AnimationPlayer")
+	if barco:
+		barco.play("barco-anim")
 	d_active = false
 	
 	

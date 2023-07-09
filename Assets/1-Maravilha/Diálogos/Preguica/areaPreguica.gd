@@ -2,6 +2,7 @@ extends Area2D
 var dialogo_existe = false
 export (NodePath) var pl
 
+
 func _process(delta):
 	var dialogue = get_parent().get_node("DialogueBox")
 	if !dialogue.d_active:
@@ -12,8 +13,12 @@ func _process(delta):
 
 func use_dialog():
 	var dialogue = get_parent().get_node("DialogueBox")
+	
 	if dialogue:
 		dialogue.start()
+		
+	
+		
 
 func _on_Area2D_body_entered(body) -> void:
 	if body.is_in_group("player"):
@@ -24,9 +29,6 @@ func _on_Area2D_body_entered(body) -> void:
 		body.motion = Vector2(0, 0)
 		body.get_node("AnimatedSprite").play("idle")
 		
-
-		
-
-
 func _on_Area2D_body_exited(body: Player):
+	
 	queue_free()

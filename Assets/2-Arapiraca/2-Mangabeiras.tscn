@@ -1396,7 +1396,7 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="Van" type="Sprite" parent="."]

@@ -7,3 +7,8 @@ func _physics_process(delta):
 		if body.name == "Player":
 			SceneTransition.change_scene("dissolve")
 			get_tree().change_scene(world_scene)
+		
+
+
+func _on_Area2D2_body_entered(body):
+	queue_free()

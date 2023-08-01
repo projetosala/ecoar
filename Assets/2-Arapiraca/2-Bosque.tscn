@@ -258,7 +258,6 @@ z_index = -3
 motion_mirroring = Vector2( 172.8, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Middle"]
-visible = false
 position = Vector2( 169, -3 )
 texture = ExtResource( 5 )
 region_enabled = true

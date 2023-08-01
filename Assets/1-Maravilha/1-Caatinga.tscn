@@ -1096,6 +1096,7 @@ anims/lado = SubResource( 48 )
 position = Vector2( 6448, -282 )
 
 [node name="plataform" type="KinematicBody2D" parent="movPlataform4"]
+position = Vector2( 137.307, 0 )
 scale = Vector2( 1.5, 1.5 )
 collision_layer = 16
 motion/sync_to_physics = true

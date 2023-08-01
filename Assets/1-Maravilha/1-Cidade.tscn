@@ -157,7 +157,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 576, 96 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( 191, 100 )
+position = Vector2( 4335, -68 )
 z_index = 3
 collision_layer = 16385
 collision_mask = 16385
@@ -167,6 +167,7 @@ __meta__ = {
 }
 
 [node name="Menu" type="TouchScreenButton" parent="Player"]
+visible = false
 position = Vector2( 153, -163 )
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 51 )
@@ -194,9 +195,11 @@ normal = ExtResource( 48 )
 action = "ui_accept"
 
 [node name="MovementButtons" type="Node2D" parent="Player"]
+visible = false
 position = Vector2( -80, -6 )
 
 [node name="Left" type="TouchScreenButton" parent="Player/MovementButtons"]
+visible = false
 position = Vector2( -120, 27 )
 scale = Vector2( 0.15, 0.15 )
 z_index = 5
@@ -205,6 +208,7 @@ pressed = ExtResource( 29 )
 action = "ui_left"
 
 [node name="Right" type="TouchScreenButton" parent="Player/MovementButtons"]
+visible = false
 position = Vector2( 0, 78 )
 rotation = 3.14159
 scale = Vector2( 0.15, 0.15 )
@@ -214,6 +218,7 @@ pressed = ExtResource( 29 )
 action = "ui_right"
 
 [node name="Jump" type="TouchScreenButton" parent="Player/MovementButtons"]
+visible = false
 position = Vector2( 280, 24 )
 rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )

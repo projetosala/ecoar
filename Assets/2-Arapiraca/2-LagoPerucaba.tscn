@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=2]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=4]
-[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/fundo.png" type="Texture" id=5]
+[ext_resource path="res://Assets/2-Arapiraca/Barco.gd" type="Script" id=5]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/grama.png" type="Texture" id=6]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/tileset.png" type="Texture" id=7]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/rua.png" type="Texture" id=8]
@@ -989,20 +989,8 @@ texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1152, 324 )
 
-[node name="Middle" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2( 47, 51 )
-z_index = -3
-motion_mirroring = Vector2( 172.8, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/Middle"]
-visible = false
-position = Vector2( 169, -3 )
-texture = ExtResource( 5 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 576, 96 )
-
 [node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( -330, 68 )
+position = Vector2( -312, 80 )
 collision_layer = 11
 collision_mask = 225
 script = ExtResource( 9 )
@@ -1061,7 +1049,7 @@ visible = false
 position = Vector2( -25, -1 )
 
 [node name="Interact" type="TouchScreenButton" parent="Player/InteractButton"]
-position = Vector2( 184, -16 )
+position = Vector2( 189, -64 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 4
 normal = ExtResource( 46 )
@@ -1223,7 +1211,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 5
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1287,7 +1275,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy9"]
@@ -1351,7 +1339,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy10"]
@@ -1415,7 +1403,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy11"]
@@ -1479,7 +1467,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy12"]
@@ -1543,7 +1530,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy7"]
@@ -1607,7 +1594,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy8"]
@@ -1671,7 +1657,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 5
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy4"]
@@ -1736,7 +1722,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 4
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy5"]
@@ -1801,7 +1787,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy6"]
@@ -2089,7 +2074,7 @@ d_file = "res://Assets/2-Arapiraca/Diálogos/Barco/barco.json"
 [node name="Area2D" type="Area2D" parent="Cenario/Barco/Barco"]
 position = Vector2( -2112, -116 )
 scale = Vector2( 1.1, 1.1 )
-script = ExtResource( 26 )
+script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Barco/Barco/Area2D"]
 position = Vector2( 1898.18, 119.746 )
@@ -2517,7 +2502,7 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = -2
 frames = SubResource( 113 )
-frame = 7
+frame = 10
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]
@@ -2525,7 +2510,6 @@ world_scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/AnimatedSprite/ChangeArea"]
 position = Vector2( 52.5996, 40.8 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 114 )
 
 [node name="background" type="TileMap" parent="."]

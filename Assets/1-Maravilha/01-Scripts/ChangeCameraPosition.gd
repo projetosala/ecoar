@@ -5,7 +5,7 @@ var heart1
 var heart2
 var heart3
 var livebutton
-
+var interactButton
 
 func _on_ChangeCameraPosition_body_entered(body):
 	bodySaiu = false
@@ -18,6 +18,8 @@ func _on_ChangeCameraPosition_body_entered(body):
 			heart1 = body.get_node("heart")
 			heart2 = body.get_node("heart2")
 			heart3 = body.get_node("heart3")
+		if body.get_node("InteractButton"):
+			interactButton = body.get_node("InteractButton")
 		while camera.offset.y < 1:
 			if bodySaiu == true: 
 				break
@@ -28,6 +30,7 @@ func _on_ChangeCameraPosition_body_entered(body):
 			heart1.position.y += 4.5
 			heart2.position.y += 4.5
 			heart3.position.y += 4.5
+			interactButton.position.y += 4.5
 func _on_ChangeCameraPosition_body_exited(body):
 	bodySaiu = true
 	if body.is_in_group("player"):

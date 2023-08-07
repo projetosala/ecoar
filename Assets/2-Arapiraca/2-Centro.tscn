@@ -288,12 +288,13 @@ script = ExtResource( 18 )
 scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
 
 [node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( 4042, 50 )
+position = Vector2( 96, 128 )
 script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 1 )
 animation = "jump"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

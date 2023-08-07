@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -39,6 +39,12 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/cerca1.png" type="Texture" id=37]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/van.png" type="Texture" id=38]
 [ext_resource path="res://Assets/Utils/ChangeArea/ChangeArea.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi1.png" type="Texture" id=40]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi2.png" type="Texture" id=41]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi4.png" type="Texture" id=42]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi3.png" type="Texture" id=43]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi5.png" type="Texture" id=44]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi6.png" type="Texture" id=45]
 
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 97.75, 43.5 )
@@ -450,7 +456,7 @@ extents = Vector2( 2.5, 6.21875 )
 1/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=34]
-extents = Vector2( 35.3077, 48.0769 )
+extents = Vector2( 42.3633, 48.0769 )
 
 [sub_resource type="SpriteFrames" id=35]
 animations = [ {
@@ -458,6 +464,14 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
 } ]
 
 [node name="2-Mangabeiras" type="Node"]
@@ -1388,6 +1402,7 @@ d_file = "res://Assets/2-Arapiraca/Diálogos/Morador-Comum/morador.json"
 
 [node name="Area2D" type="Area2D" parent="Dialogos/Morador/Morador"]
 script = ExtResource( 35 )
+pl = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Morador/Area2D"]
 position = Vector2( 696.692, 150 )
@@ -1396,8 +1411,34 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 5
+frame = 1
 playing = true
+
+[node name="Mototaxi" type="KinematicBody2D" parent="Dialogos/Morador"]
+position = Vector2( 3539, -267 )
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Mototaxi" type="AnimatedSprite" parent="Dialogos/Morador/Mototaxi"]
+position = Vector2( 705.455, 174.545 )
+scale = Vector2( 0.909091, 0.909091 )
+z_index = 1
+frames = SubResource( 37 )
+playing = true
+
+[node name="DialogueBox" parent="Dialogos/Morador/Mototaxi" instance=ExtResource( 27 )]
+d_file = "res://Assets/2-Arapiraca/Diálogos/Morador-Comum/morador.json"
+world_scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
+
+[node name="Area2D" type="Area2D" parent="Dialogos/Morador/Mototaxi"]
+script = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Mototaxi/Area2D"]
+position = Vector2( 689.636, 150 )
+shape = SubResource( 34 )
 
 [node name="Van" type="Sprite" parent="."]
 position = Vector2( -116, 45 )
@@ -1442,3 +1483,5 @@ texture = ExtResource( 38 )
 [connection signal="body_entered" from="Enemy12/HurtBox2" to="Enemy12" method="_on_HurtBox2_body_entered"]
 [connection signal="body_entered" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_exited"]

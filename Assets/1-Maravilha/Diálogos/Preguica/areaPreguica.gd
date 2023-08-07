@@ -5,11 +5,11 @@ export (NodePath) var pl
 
 func _process(delta):
 	var dialogue = get_parent().get_node("DialogueBox")
-	if !dialogue.d_active:
-		var pl = get_parent().get_parent().get_parent().get_parent().get_node("Player")
-		pl.canMove = true
-		pl.get_node("MovementButtons").visible = true
-		pl.get_node("InteractButton").visible = false
+	if dialogue.d_active:
+		pl = get_parent().get_parent().get_parent().get_parent().get_node("Player")
+		pl.canMove = false
+		pl.get_node("MovementButtons").visible = false 
+		pl.get_node("InteractButton").visible = true
 
 func use_dialog():
 	var dialogue = get_parent().get_node("DialogueBox")

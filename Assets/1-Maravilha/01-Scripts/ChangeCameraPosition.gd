@@ -45,4 +45,5 @@ func _on_ChangeCameraPosition_body_exited(body):
 				heart1.position.y -= 3
 				heart2.position.y -= 3
 				heart3.position.y -= 3
+				interactButton.position.y -=3
 		

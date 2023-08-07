@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 export (String, FILE, "*.json") var d_file
+export(String, FILE, "*.tscn") var world_scene
 
 var dialogue = []
 var current_dialog_id = 0
@@ -48,6 +49,14 @@ func _on_Timer_timeout():
 	var barco = get_parent().get_parent().get_node("AnimationPlayer")
 	if barco:
 		barco.play("barco-anim")
+	var mototaxi = get_parent().get_node("Mototaxi")
+	if mototaxi:
+		SceneTransition.change_scene("dissolve")
+		get_tree().change_scene(world_scene)
+	var pl = get_parent().get_parent().get_parent().get_parent().get_node("Player")
+	pl.canMove = true
+	pl.get_node("MovementButtons").visible = true 
+	pl.get_node("InteractButton").visible = false
 	d_active = false
 	
 	

@@ -228,7 +228,6 @@ __meta__ = {
 }
 
 [node name="Menu" type="TouchScreenButton" parent="Player"]
-visible = false
 position = Vector2( 153, -163 )
 scale = Vector2( 0.15, 0.15 )
 normal = ExtResource( 37 )
@@ -237,7 +236,6 @@ action = "ui_home"
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 7 )
 animation = "jump"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -249,7 +247,6 @@ visible = false
 position = Vector2( -25, -1 )
 
 [node name="Interact" type="TouchScreenButton" parent="Player/InteractButton"]
-visible = false
 position = Vector2( 184, -16 )
 scale = Vector2( 0.1, 0.1 )
 z_index = 4
@@ -257,11 +254,9 @@ normal = ExtResource( 40 )
 action = "ui_accept"
 
 [node name="MovementButtons" type="Node2D" parent="Player"]
-visible = false
 position = Vector2( -80, -6 )
 
 [node name="Left" type="TouchScreenButton" parent="Player/MovementButtons"]
-visible = false
 position = Vector2( -120, 27 )
 scale = Vector2( 0.15, 0.15 )
 z_index = 5
@@ -270,7 +265,6 @@ pressed = ExtResource( 25 )
 action = "ui_left"
 
 [node name="Right" type="TouchScreenButton" parent="Player/MovementButtons"]
-visible = false
 position = Vector2( 0, 78 )
 rotation = 3.14159
 scale = Vector2( 0.15, 0.15 )
@@ -280,7 +274,6 @@ pressed = ExtResource( 25 )
 action = "ui_right"
 
 [node name="Jump" type="TouchScreenButton" parent="Player/MovementButtons"]
-visible = false
 position = Vector2( 280, 24 )
 rotation = 1.5708
 scale = Vector2( 0.15, 0.15 )

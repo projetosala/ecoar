@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2d-game"
+config/name="Ecoar - A Lenda do Carcará"
 run/main_scene="res://Assets/Menu/Start.tscn"
 config/icon="res://icon.png"
 

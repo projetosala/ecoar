@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Assets/Player/Sprites/idle/idle3.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Sprites/idle/idle1.png" type="Texture" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/12-Live and Coins/Live Bar.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Player/UI/move-buttons/Pause.png" type="Texture" id=31]
 [ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=33]
+[ext_resource path="res://Assets/Player/pausada.gd" type="Script" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -84,6 +86,14 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="DynamicFont" id=7]
+size = 45
+font_data = ExtResource( 33 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 31
+font_data = ExtResource( 33 )
+
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( -8, -1 )
 script = ExtResource( 21 )
@@ -99,7 +109,6 @@ shape = SubResource( 2 )
 
 [node name="MovementButtons" type="Node2D" parent="."]
 position = Vector2( -80, 9 )
-z_index = 4
 
 [node name="Left" type="TouchScreenButton" parent="MovementButtons"]
 position = Vector2( -120, 27 )
@@ -176,3 +185,65 @@ scale = Vector2( 0.1, 0.1 )
 z_index = 4
 normal = ExtResource( 32 )
 action = "ui_accept"
+
+[node name="pausada" type="Control" parent="."]
+visible = false
+margin_left = -240.0
+margin_top = -175.0
+margin_right = 203.0
+margin_bottom = 125.0
+script = ExtResource( 34 )
+
+[node name="ColorRect" type="ColorRect" parent="pausada"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -163.0
+margin_top = 1.0
+margin_right = 174.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 0.792157 )
+
+[node name="Label" type="Label" parent="pausada/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -59.0
+margin_top = 23.0
+margin_right = 60.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 7 )
+text = "PAUSADO"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pausada/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -59.5
+margin_top = -52.0
+margin_right = 59.5
+margin_bottom = 52.0
+
+[node name="voltar" type="Button" parent="pausada/ColorRect/VBoxContainer"]
+margin_right = 119.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 8 )
+action_mode = 0
+text = "VOLTAR"
+
+[node name="opcoes" type="Button" parent="pausada/ColorRect/VBoxContainer"]
+margin_top = 36.0
+margin_right = 119.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 8 )
+text = "OPÇÕES"
+
+[node name="sair" type="Button" parent="pausada/ColorRect/VBoxContainer"]
+margin_top = 72.0
+margin_right = 119.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 8 )
+text = "SAIR"
+
+[connection signal="pressed" from="pausada/ColorRect/VBoxContainer/voltar" to="pausada" method="_on_voltar_pressed"]
+[connection signal="pressed" from="pausada/ColorRect/VBoxContainer/opcoes" to="pausada" method="_on_opcoes_pressed"]
+[connection signal="pressed" from="pausada/ColorRect/VBoxContainer/sair" to="pausada" method="_on_sair_pressed"]

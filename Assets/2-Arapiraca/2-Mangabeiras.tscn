@@ -46,6 +46,25 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi5.png" type="Texture" id=44]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi6.png" type="Texture" id=45]
 
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 42.3633, 48.0769 )
+
+[sub_resource type="SpriteFrames" id=35]
+animations = [ {
+"frames": [ ExtResource( 32 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 97.75, 43.5 )
 
@@ -455,26 +474,61 @@ extents = Vector2( 2.5, 6.21875 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=34]
-extents = Vector2( 42.3633, 48.0769 )
-
-[sub_resource type="SpriteFrames" id=35]
-animations = [ {
-"frames": [ ExtResource( 32 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=37]
-animations = [ {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 45 ) ],
-"loop": true,
-"name": "default",
-"speed": 7.0
-} ]
-
 [node name="2-Mangabeiras" type="Node"]
+
+[node name="Dialogos" type="Node2D" parent="."]
+position = Vector2( -339, -117 )
+
+[node name="Morador" type="Node2D" parent="Dialogos"]
+
+[node name="Morador" type="KinematicBody2D" parent="Dialogos/Morador"]
+position = Vector2( -92, -17 )
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+
+[node name="DialogueBox" parent="Dialogos/Morador/Morador" instance=ExtResource( 27 )]
+d_file = "res://Assets/2-Arapiraca/Diálogos/Morador-Comum/morador.json"
+
+[node name="Area2D" type="Area2D" parent="Dialogos/Morador/Morador"]
+script = ExtResource( 35 )
+pl = NodePath("../../../../Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Morador/Area2D"]
+position = Vector2( 696.692, 150 )
+shape = SubResource( 34 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
+position = Vector2( 696, 160 )
+frames = SubResource( 35 )
+frame = 3
+playing = true
+
+[node name="Mototaxi" type="KinematicBody2D" parent="Dialogos/Morador"]
+position = Vector2( 3539, -267 )
+scale = Vector2( 1.1, 1.1 )
+z_index = -1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Mototaxi" type="AnimatedSprite" parent="Dialogos/Morador/Mototaxi"]
+position = Vector2( 705.455, 174.545 )
+scale = Vector2( 0.909091, 0.909091 )
+z_index = 1
+frames = SubResource( 37 )
+frame = 3
+playing = true
+
+[node name="DialogueBox" parent="Dialogos/Morador/Mototaxi" instance=ExtResource( 27 )]
+d_file = "res://Assets/2-Arapiraca/Diálogos/Mototaxi/mototaxi.json"
+world_scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
+
+[node name="Area2D" type="Area2D" parent="Dialogos/Morador/Mototaxi"]
+script = ExtResource( 35 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Mototaxi/Area2D"]
+position = Vector2( 689.636, 150 )
+shape = SubResource( 34 )
 
 [node name="ChangeArea" parent="." instance=ExtResource( 39 )]
 position = Vector2( 1917, 55 )
@@ -510,7 +564,7 @@ format = 1
 tile_data = PoolIntArray( -2490103, 2, 0, -2293405, 1, 0, -1244993, 3, 0, -524336, 2, 0, -262235, 1, 0, -327624, 1, 0, -327582, 5, 0, -327564, 4, 0, -196605, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3736, -272 )
+position = Vector2( 24, 48 )
 collision_layer = 11
 collision_mask = 225
 
@@ -587,7 +641,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 6
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -650,7 +704,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy3"]
@@ -713,7 +767,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy4"]
@@ -776,7 +830,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy5"]
@@ -839,7 +893,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy6"]
@@ -902,7 +956,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy7"]
@@ -965,7 +1019,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -1028,7 +1082,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 5
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy8"]
@@ -1091,7 +1145,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy9"]
@@ -1154,7 +1208,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy10"]
@@ -1217,7 +1271,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy11"]
@@ -1280,7 +1334,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy12"]
@@ -1387,65 +1441,15 @@ tile_set = SubResource( 33 )
 format = 1
 tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 0, -65535, 0, 0 )
 
-[node name="Dialogos" type="Node2D" parent="."]
-position = Vector2( -339, -117 )
-
-[node name="Morador" type="Node2D" parent="Dialogos"]
-
-[node name="Morador" type="KinematicBody2D" parent="Dialogos/Morador"]
-position = Vector2( -92, -17 )
-scale = Vector2( 1.1, 1.1 )
-z_index = -1
-
-[node name="DialogueBox" parent="Dialogos/Morador/Morador" instance=ExtResource( 27 )]
-d_file = "res://Assets/2-Arapiraca/Diálogos/Morador-Comum/morador.json"
-
-[node name="Area2D" type="Area2D" parent="Dialogos/Morador/Morador"]
-script = ExtResource( 35 )
-pl = NodePath("../../../../Player")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Morador/Area2D"]
-position = Vector2( 696.692, 150 )
-shape = SubResource( 34 )
-
-[node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
-position = Vector2( 696, 160 )
-frames = SubResource( 35 )
-frame = 5
-playing = true
-
-[node name="Mototaxi" type="KinematicBody2D" parent="Dialogos/Morador"]
-position = Vector2( 3539, -267 )
-scale = Vector2( 1.1, 1.1 )
-z_index = -1
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Mototaxi" type="AnimatedSprite" parent="Dialogos/Morador/Mototaxi"]
-position = Vector2( 705.455, 174.545 )
-scale = Vector2( 0.909091, 0.909091 )
-z_index = 1
-frames = SubResource( 37 )
-frame = 5
-playing = true
-
-[node name="DialogueBox" parent="Dialogos/Morador/Mototaxi" instance=ExtResource( 27 )]
-d_file = "res://Assets/2-Arapiraca/Diálogos/Mototaxi/mototaxi.json"
-world_scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
-
-[node name="Area2D" type="Area2D" parent="Dialogos/Morador/Mototaxi"]
-script = ExtResource( 35 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogos/Morador/Mototaxi/Area2D"]
-position = Vector2( 689.636, 150 )
-shape = SubResource( 34 )
-
 [node name="Van" type="Sprite" parent="."]
 position = Vector2( -116, 45 )
 scale = Vector2( 0.55, 0.55 )
 texture = ExtResource( 38 )
 
+[connection signal="body_entered" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox2" to="Enemy" method="_on_HurtBox2_body_entered"]
@@ -1482,7 +1486,3 @@ texture = ExtResource( 38 )
 [connection signal="body_entered" from="Enemy12/HitBox" to="Enemy12" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy12/HurtBox" to="Enemy12" method="_on_HurtBox_body_entered"]
 [connection signal="body_entered" from="Enemy12/HurtBox2" to="Enemy12" method="_on_HurtBox2_body_entered"]
-[connection signal="body_entered" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Dialogos/Morador/Morador/Area2D" to="Dialogos/Morador/Morador/Area2D" method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Dialogos/Morador/Mototaxi/Area2D" to="Dialogos/Morador/Mototaxi/Area2D" method="_on_Area2D_body_exited"]

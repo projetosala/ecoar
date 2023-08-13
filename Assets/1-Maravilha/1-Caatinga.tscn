@@ -769,7 +769,6 @@ cast_to = Vector2( 0, 24 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy"]
 frames = SubResource( 22 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -831,7 +830,6 @@ cast_to = Vector2( 0, 24 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy2"]
 frames = SubResource( 22 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=161 format=2]
+[gd_scene load_steps=124 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/grama.png" type="Texture" id=6]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/tileset.png" type="Texture" id=7]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/rua.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Player/Scripts/Player.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/dialogue_box.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Utils/CityBanner/CityBanner.gd" type="Script" id=11]
 [ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=12]
@@ -29,37 +29,6 @@
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/DialogueBox.tscn" type="PackedScene" id=27]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/chorume.png" type="Texture" id=28]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=29]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle2.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle1.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle4.png" type="Texture" id=32]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle5.png" type="Texture" id=33]
-[ext_resource path="res://Assets/Player/Sprites/run/run1.png" type="Texture" id=34]
-[ext_resource path="res://Assets/Player/Sprites/run/run2.png" type="Texture" id=35]
-[ext_resource path="res://Assets/Player/Sprites/run/run8.png" type="Texture" id=36]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle6.png" type="Texture" id=37]
-[ext_resource path="res://Assets/Player/Sprites/run/run3.png" type="Texture" id=38]
-[ext_resource path="res://Assets/Player/Sprites/run/run9.png" type="Texture" id=39]
-[ext_resource path="res://Assets/Player/Sprites/idle/idle3.png" type="Texture" id=40]
-[ext_resource path="res://Assets/Player/Sprites/run/run4.png" type="Texture" id=41]
-[ext_resource path="res://Assets/Player/Sprites/run/run10.png" type="Texture" id=42]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Back.png" type="Texture" id=43]
-[ext_resource path="res://Assets/Player/UI/move-buttons/BackPressed.png" type="Texture" id=44]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Pause.png" type="Texture" id=45]
-[ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=46]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/12-Live and Coins/Big Heart Idle (18x14).png" type="Texture" id=47]
-[ext_resource path="res://Assets/Player/Sprites/run/run13.png" type="Texture" id=48]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/12-Live and Coins/Big Heart Hit (18x14).png" type="Texture" id=49]
-[ext_resource path="res://Assets/Player/Sprites/run/run6.png" type="Texture" id=50]
-[ext_resource path="res://Assets/Player/Sprites/jump/jump1.png" type="Texture" id=51]
-[ext_resource path="res://Assets/Player/Sprites/fall/fall2.png" type="Texture" id=52]
-[ext_resource path="res://Assets/Player/Sprites/run/run14.png" type="Texture" id=53]
-[ext_resource path="res://Assets/Player/Sprites/run/run7.png" type="Texture" id=54]
-[ext_resource path="res://Assets/Player/Sprites/jump/jump2.png" type="Texture" id=55]
-[ext_resource path="res://Assets/Player/Sprites/run/run5.png" type="Texture" id=56]
-[ext_resource path="res://Assets/Player/Sprites/run/run11.png" type="Texture" id=57]
-[ext_resource path="res://Assets/Player/Sprites/fall/fall1.png" type="Texture" id=58]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/12-Live and Coins/Live Bar.png" type="Texture" id=59]
-[ext_resource path="res://Assets/Player/Sprites/run/run12.png" type="Texture" id=60]
 [ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=61]
 [ext_resource path="res://Assets/2-Arapiraca/plataforma-Cima-Baixo.gd" type="Script" id=62]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/lixo_inimigo/lixo_inimigo5.png" type="Texture" id=63]
@@ -89,57 +58,6 @@
 
 [sub_resource type="RectangleShape2D" id=64]
 extents = Vector2( 3441, 10 )
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 58 ), ExtResource( 52 ) ],
-"loop": true,
-"name": "fall",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 30 ), ExtResource( 40 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 37 ) ],
-"loop": true,
-"name": "idle",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 51 ), ExtResource( 55 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 56 ), ExtResource( 50 ), ExtResource( 54 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 53 ) ],
-"loop": true,
-"name": "run",
-"speed": 12.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 25.3572 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 47 )
-region = Rect2( 0, 0, 20, 14 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 49 )
-region = Rect2( 0, 0, 18, 14 )
-
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 49 )
-region = Rect2( 18, 0, 18, 14 )
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ SubResource( 3 ) ],
-"loop": true,
-"name": "heart",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ), SubResource( 5 ), null ],
-"loop": false,
-"name": "heart_black",
-"speed": 10.0
-} ]
 
 [sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -927,6 +845,9 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( -320, 72 )
+
 [node name="ChangeArea" parent="." instance=ExtResource( 23 )]
 world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
@@ -988,105 +909,6 @@ position = Vector2( 68, 113 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1152, 324 )
-
-[node name="Player" type="KinematicBody2D" parent="." groups=["player"]]
-position = Vector2( -312, 80 )
-collision_layer = 11
-collision_mask = 225
-script = ExtResource( 9 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
-frames = SubResource( 1 )
-animation = "jump"
-playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -4, -1.35715 )
-shape = SubResource( 2 )
-
-[node name="Camera" type="Camera2D" parent="Player"]
-position = Vector2( 0, 17 )
-offset = Vector2( 0, -90 )
-current = true
-zoom = Vector2( 0.43, 0.43 )
-smoothing_speed = 1.0
-
-[node name="LiveBar" type="Sprite" parent="Player"]
-position = Vector2( -142, -160 )
-scale = Vector2( 2, 2 )
-z_index = 2
-texture = ExtResource( 59 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="heart" type="AnimatedSprite" parent="Player"]
-position = Vector2( -121, -159.2 )
-scale = Vector2( 1.4, 1.4 )
-z_index = 2
-frames = SubResource( 6 )
-animation = "heart"
-playing = true
-
-[node name="heart2" type="AnimatedSprite" parent="Player"]
-position = Vector2( -144, -159.2 )
-scale = Vector2( 1.4, 1.4 )
-z_index = 2
-frames = SubResource( 6 )
-animation = "heart"
-playing = true
-
-[node name="heart3" type="AnimatedSprite" parent="Player"]
-position = Vector2( -165, -159.2 )
-scale = Vector2( 1.4, 1.4 )
-z_index = 2
-frames = SubResource( 6 )
-animation = "heart"
-playing = true
-
-[node name="InteractButton" type="Node2D" parent="Player"]
-visible = false
-position = Vector2( -25, -1 )
-
-[node name="Interact" type="TouchScreenButton" parent="Player/InteractButton"]
-position = Vector2( 189, -64 )
-scale = Vector2( 0.1, 0.1 )
-z_index = 4
-normal = ExtResource( 46 )
-action = "ui_accept"
-
-[node name="MovementButtons" type="Node2D" parent="Player"]
-position = Vector2( -86, -35 )
-z_index = 2
-
-[node name="Left" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( -120, 27 )
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 43 )
-pressed = ExtResource( 44 )
-action = "ui_left"
-
-[node name="Right" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( 0, 78 )
-rotation = 3.14159
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 43 )
-pressed = ExtResource( 44 )
-action = "ui_right"
-
-[node name="Jump" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( 280, 24 )
-rotation = 1.5708
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 43 )
-pressed = ExtResource( 44 )
-action = "ui_up"
-
-[node name="Menu" type="TouchScreenButton" parent="Player/MovementButtons"]
-position = Vector2( 240, -160 )
-scale = Vector2( 0.15, 0.15 )
-normal = ExtResource( 45 )
-action = "ui_home"
 
 [node name="terrain" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
@@ -1211,7 +1033,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1275,7 +1097,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy9"]
@@ -1339,7 +1161,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy10"]
@@ -1403,7 +1225,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy11"]
@@ -1467,7 +1289,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy12"]
@@ -1531,7 +1353,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy7"]
@@ -1595,7 +1417,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy8"]
@@ -1659,7 +1481,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy4"]
@@ -1724,7 +1546,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy5"]
@@ -1789,7 +1611,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy6"]
@@ -2039,7 +1861,6 @@ d_file = "res://Assets/2-Arapiraca/Diálogos/Barco/barco2.json"
 position = Vector2( -1048, -60 )
 scale = Vector2( 0.55, 0.55 )
 script = ExtResource( 26 )
-pl = NodePath("../../../../Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Poluicao/Sprite/Area2D"]
 position = Vector2( 1881.82, 123.636 )
@@ -2506,6 +2327,7 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 1
 frames = SubResource( 113 )
+frame = 10
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]

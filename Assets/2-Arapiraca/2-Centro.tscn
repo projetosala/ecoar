@@ -226,7 +226,7 @@ texto = "Centro - Arapiraca"
 position = Vector2( 32, 184 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 15 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 7 )]

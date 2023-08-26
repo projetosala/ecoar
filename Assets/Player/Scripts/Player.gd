@@ -1,6 +1,6 @@
 extends KinematicBody2D
 class_name Player
-var canMove = true
+export var canMove = true
 
 var motion = Vector2()
 const up = Vector2(0,-1)
@@ -51,7 +51,7 @@ func _physics_process(delta):
 				motion.x = lerp(motion.x, 0,0.05)
 		if Input.is_action_pressed("ui_home"):
 			get_tree().paused = true
-			$pausada.visible = true
+			$pause/pausada.visible = true
 			
 			
 	motion = move_and_slide(motion, up)

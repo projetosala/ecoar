@@ -6,6 +6,7 @@ func _ready():
 func _on_voltar_pressed():
 	get_tree().paused = false
 	self.visible = false
+	
 
 func _on_opcoes_pressed():
 	print("opcoes")

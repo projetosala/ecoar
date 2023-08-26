@@ -593,7 +593,7 @@ position = Vector2( 705.455, 174.545 )
 scale = Vector2( 0.909091, 0.909091 )
 z_index = 1
 frames = SubResource( 37 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="DialogueBox" parent="Dialogos/Morador/Mototaxi" instance=ExtResource( 27 )]
@@ -718,7 +718,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 4
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -781,7 +781,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy3"]
@@ -844,7 +844,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy4"]
@@ -907,7 +907,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy5"]
@@ -970,7 +970,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy6"]
@@ -1033,7 +1033,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy7"]
@@ -1096,7 +1096,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -1159,7 +1159,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 3
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy8"]
@@ -1222,7 +1222,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 2
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy9"]
@@ -1285,7 +1285,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy10"]
@@ -1348,7 +1348,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy11"]
@@ -1411,7 +1411,7 @@ cast_to = Vector2( 0, 24 )
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 27 )
 animation = "walk"
-frame = 1
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy12"]

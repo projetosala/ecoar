@@ -230,7 +230,7 @@ texto = "Centro - Arapiraca"
 position = Vector2( 32, 184 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 15 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="Mototaxi2" type="AnimatedSprite" parent="."]
@@ -238,7 +238,7 @@ position = Vector2( 4423, 203 )
 scale = Vector2( 0.909091, 0.909091 )
 z_index = 6
 frames = SubResource( 15 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="ChangeArea" parent="Mototaxi2" instance=ExtResource( 19 )]

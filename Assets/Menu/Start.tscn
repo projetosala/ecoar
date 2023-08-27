@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://Assets/Menu/botao.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Menu/Start.gd" type="Script" id=3]
@@ -23,7 +23,6 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/4.png" type="Texture" id=28]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/grass.png" type="Texture" id=29]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/tree.png" type="Texture" id=30]
-[ext_resource path="res://Assets/Menu/IFALHorizontal.png" type="Texture" id=31]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/rua.png" type="Texture" id=34]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/tileset.png" type="Texture" id=35]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/arapiraca_tree.png" type="Texture" id=36]
@@ -827,11 +826,6 @@ texture = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="IfalHorizontal" type="Sprite" parent="menu/Player/Camera/TelaIncialEcoarSemFundo"]
-position = Vector2( 381.817, -260 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 31 )
 
 [node name="limit" type="StaticBody2D" parent="menu"]
 position = Vector2( -500, -13 )

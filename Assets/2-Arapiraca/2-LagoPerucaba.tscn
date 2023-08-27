@@ -849,7 +849,8 @@ __meta__ = {
 scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -320, 72 )
+position = Vector2( -450, 52 )
+z_index = 2
 
 [node name="ChangeArea" parent="." instance=ExtResource( 23 )]
 world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
@@ -1036,6 +1037,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1099,7 +1101,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 6
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy9"]
@@ -1163,7 +1165,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 6
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy10"]
@@ -1227,7 +1229,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 6
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy11"]
@@ -1291,7 +1293,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 5
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy12"]
@@ -1355,7 +1357,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 6
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy7"]
@@ -1419,7 +1421,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 5
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy8"]
@@ -1483,6 +1485,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy4"]
@@ -1547,7 +1550,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 6
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy5"]
@@ -1612,7 +1615,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 5
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy6"]
@@ -2328,11 +2331,11 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 1
 frames = SubResource( 113 )
-frame = 6
+frame = 5
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]
-world_scene = "res://Assets/2-Arapiraca/2-Centro.tscn"
+world_scene = "res://Assets/3-Maceió/MundauBebedouro.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/AnimatedSprite/ChangeArea"]
 position = Vector2( 52.5996, 40.8 )

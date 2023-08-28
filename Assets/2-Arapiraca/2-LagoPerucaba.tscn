@@ -850,14 +850,17 @@ scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( -450, 52 )
-z_index = 2
+z_index = 1
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ChangeArea" parent="." instance=ExtResource( 23 )]
 world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="lago" type="TileMap" parent="ChangeArea"]
 scale = Vector2( 2, 2 )
-z_index = 1
+z_index = 2
 tile_set = ExtResource( 22 )
 cell_size = Vector2( 2, 2 )
 show_collision = true
@@ -1037,7 +1040,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1101,7 +1104,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy9"]
@@ -1165,7 +1168,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy10"]
@@ -1229,7 +1232,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy11"]
@@ -1293,7 +1296,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy12"]
@@ -1357,7 +1359,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy7"]
@@ -1421,7 +1423,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy8"]
@@ -1485,7 +1486,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 3
+frame = 2
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy4"]
@@ -1550,7 +1551,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy5"]
@@ -1615,7 +1616,6 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy6"]
@@ -1895,6 +1895,7 @@ shape = SubResource( 66 )
 
 [node name="Barco" type="Sprite" parent="Cenario/Barco"]
 position = Vector2( 2020, 99 )
+z_index = 1
 texture = ExtResource( 24 )
 
 [node name="DialogueBox" parent="Cenario/Barco/Barco" instance=ExtResource( 27 )]
@@ -2331,7 +2332,7 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 1
 frames = SubResource( 113 )
-frame = 5
+frame = 9
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]
@@ -2386,11 +2387,11 @@ tile_data = PoolIntArray( 131251, 0, 0, 131252, 0, 1, 131253, 0, 1, 131254, 0, 1
 
 [node name="chorume" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
-z_index = 1
+z_index = 2
 tile_set = SubResource( 79 )
 cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( 458993, 0, 0, 459037, 0, 0, 459068, 0, 0, 459082, 0, 0, 459106, 0, 0, 459145, 0, 0, 459172, 0, 0, 459190, 0, 0 )
+tile_data = PoolIntArray( 458966, 0, 0, 458968, 0, 0, 458993, 0, 0, 459037, 0, 0, 459068, 0, 0, 459082, 0, 0, 459106, 0, 0, 459145, 0, 0, 459172, 0, 0, 459190, 0, 0 )
 
 [node name="Pule-caixa" type="Sprite" parent="."]
 position = Vector2( 8966, 64 )

@@ -13,4 +13,5 @@ func _on_opcoes_pressed():
 
 
 func _on_sair_pressed():
-	get_tree().quit()
+	get_tree().paused = false
+	get_tree().change_scene("res://Assets/Menu/Start.tscn")

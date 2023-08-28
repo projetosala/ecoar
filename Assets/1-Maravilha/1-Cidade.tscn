@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Assets/Player/Sprites/run/run11.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/tileset.png" type="Texture" id=2]
@@ -54,6 +54,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/banco.png" type="Texture" id=52]
 [ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=53]
 [ext_resource path="res://Assets/Player/pausada.gd" type="Script" id=54]
+[ext_resource path="res://Assets/Songs/cidade1.wav" type="AudioStream" id=55]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -99,7 +100,7 @@ extents = Vector2( 176, 10 )
 extents = Vector2( 10, 81 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 12, 10 )
+extents = Vector2( 12, 46 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 265.5, 173 )
@@ -175,6 +176,11 @@ script = ExtResource( 44 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2( -64, -80 )
+stream = ExtResource( 55 )
+autoplay = true
 
 [node name="Menu" type="TouchScreenButton" parent="Player"]
 position = Vector2( 153, -163 )
@@ -506,7 +512,7 @@ position = Vector2( 5994, 72 )
 world_scene = "res://Assets/1-Maravilha/1-Museu.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/ChangeArea"]
-position = Vector2( -5, -22 )
+position = Vector2( -5, 14 )
 z_index = 1
 shape = SubResource( 6 )
 

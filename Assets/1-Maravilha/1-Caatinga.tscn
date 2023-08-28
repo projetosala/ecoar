@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig4.png" type="Texture" id=29]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig3.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Utils/Enemies/Enemy.gd" type="Script" id=31]
+[ext_resource path="res://Assets/Songs/menu.wav" type="AudioStream" id=32]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 15.5, 8 )
@@ -769,6 +770,7 @@ cast_to = Vector2( 0, 24 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy"]
 frames = SubResource( 22 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
@@ -830,6 +832,7 @@ cast_to = Vector2( 0, 24 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy2"]
 frames = SubResource( 22 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -875,8 +878,17 @@ position = Vector2( -391, -186 )
 z_index = 1
 collision_layer = 11
 collision_mask = 227
+__meta__ = {
+"_edit_group_": true
+}
 acceleration = 25
 max_speed = 140
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2( -168, 194 )
+stream = ExtResource( 32 )
+autoplay = true
+max_distance = 2e+07
 
 [node name="limit" type="StaticBody2D" parent="."]
 position = Vector2( -500, -13 )

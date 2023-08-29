@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tilesets/1-Museu.tres" type="TileSet" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/11-Door/Idle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/Sprites/14-TileSets/Decorations (32x32).png" type="Texture" id=5]
 [ext_resource path="res://Assets/Songs/centro.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.gd" type="Script" id=7]
+[ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/dialogue_box.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Assets/1-Maravilha/02-Scripts/Portal.gd" type="Script" id=32]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/pule-caixa.png" type="Texture" id=33]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/quadro.png" type="Texture" id=34]
 [ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=35]
-[ext_resource path="res://Assets/Utils/CityBanner/CityBanner.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/02/guia.png" type="Texture" id=38]
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=39]
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/DialogueBox.tscn" type="PackedScene" id=41]
@@ -26,6 +28,41 @@ extents = Vector2( 32, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 35.3077, 48.0769 )
+
+[sub_resource type="DynamicFont" id=58]
+size = 37
+font_data = ExtResource( 9 )
+
+[sub_resource type="Animation" id=59]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "entrada"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -344, 0 ), Vector2( 650, 0 ), Vector2( 650, 0 ), Vector2( -344, 0 ) ]
+}
 
 [node name="1-Museu" type="Node2D"]
 script = ExtResource( 35 )
@@ -169,9 +206,42 @@ scale = Vector2( 0.5, 0.5 )
 z_index = -4
 texture = ExtResource( 34 )
 
-[node name="CityBanner" parent="." instance=ExtResource( 36 )]
-visible = false
-texto = "Museu de Maravilha"
+[node name="CityBanner" type="CanvasLayer" parent="."]
+script = ExtResource( 7 )
+texto = "Museu de Paleotologia Otaviano Florentino Ritir - Maravilha"
+
+[node name="Node2D" type="Node2D" parent="CityBanner"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CityBanner/Node2D"]
+margin_left = -609.0
+margin_top = 19.0
+margin_right = 63.0
+margin_bottom = 89.0
+rect_scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 8 )
+region_rect = Rect2( -0.021, 0.207, 32.027, 31.719 )
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 4
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="CityBanner/Node2D/NinePatchRect"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 266.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 58 )
+text = "..."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CityBanner"]
+autoplay = "entrada"
+playback_speed = 0.5
+anims/RESET = SubResource( 59 )
+anims/entrada = SubResource( 2 )
 
 [connection signal="body_entered" from="Areas2D/ChangeCameraPosition" to="Areas2D/ChangeCameraPosition" method="_on_ChangeCameraPosition_body_entered"]
 [connection signal="body_exited" from="Areas2D/ChangeCameraPosition" to="Areas2D/ChangeCameraPosition" method="_on_ChangeCameraPosition_body_exited"]

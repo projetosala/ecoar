@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=2]
@@ -18,7 +18,7 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/outdoor.png" type="Texture" id=16]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/planetario.png" type="Texture" id=17]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/poste/posteSemFio.png" type="Texture" id=18]
-[ext_resource path="res://Assets/2-Arapiraca/Tiles/04/carro3.png" type="Texture" id=19]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi2.png" type="Texture" id=19]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/background-area.png" type="Texture" id=20]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/03/arapiraca_tree.png" type="Texture" id=21]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/waterCorreta.tres" type="TileSet" id=22]
@@ -30,6 +30,13 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/chorume.png" type="Texture" id=28]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=29]
 [ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=30]
+[ext_resource path="res://Assets/Songs/lago-perucaba.wav" type="AudioStream" id=31]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi3.png" type="Texture" id=32]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi5.png" type="Texture" id=33]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi6.png" type="Texture" id=34]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi4.png" type="Texture" id=35]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/01/mototaxi1.png" type="Texture" id=36]
+[ext_resource path="res://Assets/2-Arapiraca/Tiles/04/carro3.png" type="Texture" id=37]
 [ext_resource path="res://Assets/1-Maravilha/01-Scripts/ChangeCameraPosition.gd" type="Script" id=61]
 [ext_resource path="res://Assets/2-Arapiraca/plataforma-Cima-Baixo.gd" type="Script" id=62]
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/01/lixo_inimigo/lixo_inimigo5.png" type="Texture" id=63]
@@ -221,7 +228,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=100]
-extents = Vector2( 12, 8 )
+extents = Vector2( 12, 9.33335 )
 
 [sub_resource type="SpriteFrames" id=101]
 animations = [ {
@@ -232,13 +239,13 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=102]
-extents = Vector2( 13.3333, 7.33333 )
+extents = Vector2( 13.3333, 5.55553 )
 
 [sub_resource type="RectangleShape2D" id=103]
-extents = Vector2( 2.5, 8.41667 )
+extents = Vector2( 3.50012, 8.41667 )
 
 [sub_resource type="RectangleShape2D" id=104]
-extents = Vector2( 2.5, 8.10938 )
+extents = Vector2( 3.49988, 8.10938 )
 
 [sub_resource type="RectangleShape2D" id=67]
 extents = Vector2( 166.563, 26.25 )
@@ -841,6 +848,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="SpriteFrames" id=116]
+animations = [ {
+"frames": [ ExtResource( 36 ), ExtResource( 19 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
 [node name="2-LagoPerucaba" type="Node2D"]
 script = ExtResource( 30 )
 __meta__ = {
@@ -849,11 +864,17 @@ __meta__ = {
 scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
-position = Vector2( -450, 52 )
+position = Vector2( -474, 78 )
 z_index = 1
+collision_layer = 11
+collision_mask = 225
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource( 31 )
+autoplay = true
 
 [node name="ChangeArea" parent="." instance=ExtResource( 23 )]
 world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
@@ -1019,7 +1040,7 @@ script = ExtResource( 70 )
 speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Enemy3"]
-position = Vector2( 0, 9 )
+position = Vector2( 0, 7.66665 )
 shape = SubResource( 100 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Enemy3"]
@@ -1051,7 +1072,7 @@ collision_layer = 64
 collision_mask = 2
 
 [node name="Collision" type="CollisionShape2D" parent="Enemies/Enemy3/HitBox"]
-position = Vector2( 0, -3.33333 )
+position = Vector2( 0, -5.11113 )
 shape = SubResource( 102 )
 
 [node name="HurtBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1061,7 +1082,7 @@ collision_layer = 32
 collision_mask = 2
 
 [node name="Collision1" type="CollisionShape2D" parent="Enemies/Enemy3/HurtBox"]
-position = Vector2( -10.5, 0 )
+position = Vector2( -11.5, 0 )
 shape = SubResource( 103 )
 
 [node name="HurtBox2" type="Area2D" parent="Enemies/Enemy3"]
@@ -1071,7 +1092,8 @@ collision_layer = 128
 collision_mask = 2
 
 [node name="Collision2" type="CollisionShape2D" parent="Enemies/Enemy3/HurtBox2"]
-position = Vector2( 10.5, 0 )
+position = Vector2( 11.5002, 0 )
+z_as_relative = false
 shape = SubResource( 104 )
 
 [node name="Enemy9" type="KinematicBody2D" parent="Enemies"]
@@ -1667,7 +1689,7 @@ texture = ExtResource( 13 )
 
 [node name="Carro5" type="Sprite" parent="Cenario/Carro4"]
 position = Vector2( 3167.5, -2.5 )
-texture = ExtResource( 19 )
+texture = ExtResource( 37 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Carro4"]
 
@@ -2330,9 +2352,9 @@ shape = SubResource( 86 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Cenario"]
 position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
-z_index = 1
+z_index = 2
 frames = SubResource( 113 )
-frame = 9
+frame = 7
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]
@@ -2398,6 +2420,14 @@ position = Vector2( 8966, 64 )
 scale = Vector2( 2, 2 )
 z_index = -1
 texture = ExtResource( 86 )
+
+[node name="Mototaxi" type="AnimatedSprite" parent="."]
+position = Vector2( -533, 106 )
+scale = Vector2( 0.909091, 0.909091 )
+z_index = 3
+frames = SubResource( 116 )
+frame = 4
+playing = true
 
 [connection signal="body_entered" from="Enemies/Enemy3/HitBox" to="Enemies/Enemy3" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemies/Enemy3/HurtBox" to="Enemies/Enemy3" method="_on_HurtBox_body_entered"]

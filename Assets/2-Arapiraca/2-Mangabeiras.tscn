@@ -471,7 +471,7 @@ shape = SubResource( 34 )
 [node name="Sprite" type="AnimatedSprite" parent="Dialogos/Morador/Morador"]
 position = Vector2( 696, 160 )
 frames = SubResource( 35 )
-frame = 5
+frame = 3
 playing = true
 
 [node name="Mototaxi" type="KinematicBody2D" parent="Dialogos/Morador"]
@@ -538,6 +538,9 @@ tile_data = PoolIntArray( -2490103, 2, 0, -2293405, 1, 0, -1244993, 3, 0, -52433
 position = Vector2( 24, 48 )
 collision_layer = 11
 collision_mask = 225
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2( -96, -128 )

@@ -6,13 +6,12 @@ var heart2
 var heart3
 var livebutton
 var interactButton
-
+var pause
 func _on_ChangeCameraPosition_body_entered(body):
 	bodySaiu = false
 	if body.is_in_group("player"):
 		var camera = body.get_node("Camera")
 		var buttons = body.get_node("MovementButtons")
-	
 		if body.get_node("LiveBar"):
 			livebutton = body.get_node("LiveBar")
 			heart1 = body.get_node("heart")
@@ -31,6 +30,8 @@ func _on_ChangeCameraPosition_body_entered(body):
 				heart1.position.y += 4.5
 				heart2.position.y += 4.5
 				heart3.position.y += 4.5
+			if body.get_node("pause"):
+				body.get_node("pause").position.y += 4.5
 			interactButton.position.y += 4.5
 func _on_ChangeCameraPosition_body_exited(body):
 	bodySaiu = true
@@ -46,5 +47,7 @@ func _on_ChangeCameraPosition_body_exited(body):
 				heart1.position.y -= 3
 				heart2.position.y -= 3
 				heart3.position.y -= 3
+			if body.get_node("pause"):
+				body.get_node("pause").position.y -= 3
 			interactButton.position.y -=3
 		

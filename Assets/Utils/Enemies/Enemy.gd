@@ -32,7 +32,7 @@ func _on_HitBox_body_entered(body: Player) -> void:
 	get_node("HurtBox2").monitoring = false
 	hitted =  true
 	health -= 1
-	body.motion.y -= 300
+	body.motion.y -= 150
 	yield(get_tree().create_timer(0.1), "timeout")
 	hitted = false
 	if health == 0:

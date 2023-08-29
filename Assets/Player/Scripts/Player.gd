@@ -22,6 +22,8 @@ func removeHeart(life):
 		get_tree().reload_current_scene()
 		
 func _physics_process(delta):
+	print("hitted", hitted)
+	print(life)
 	motion.y += gravity
 	var friction = false
 	if canMove == true:

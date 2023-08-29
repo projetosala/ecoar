@@ -1,8 +1,11 @@
 [
 	{"name": "???", "text": "Ei, explorador! Eu preciso da sua ajuda."},
-	{"name": "Turista", "text": "O quê?! Uma estátua falante?"},
-	{"name": "Preguiça", "text": "Sou uma preguiça gigante, não uma estátua."},
-	{"name": "Turista", "text": "Como assim você precisa da minha ajuda?"},
-	{"name": "Preguiça", "text": "Animais do seu tempo, que são de Alagoas se perderam no período pré-histórico. Resgate eles!"},
-	{"name": "Preguiça", "text": "Vá ao museu da cidade, e procure por um quadro com dinossauros. Lá você saberá o que fazer!"},
+	{"name": "Turista", "text": "O quê?! Um carcará falante?"},
+	{"name": "Carcará", "text": "Eu sou a própria natureza. Preciso da sua ajuda para impedir o que está acontecendo em Alagoas!"},
+	{"name": "Turista", "text": "Como assim você precisa da minha ajuda? Sou apenas um turista."},
+	{"name": "Carcará", "text": "O Estado de Alagoas está sofrendo com diversos problemas ambientais: Poluição, línguas negras, afundamentos de casas decorrentes da extração de sal-gema..."},
+	{"name": "Turista", "text": "Minha nossa! E o que eu poderia fazer para ajudar a combater isso?"},
+	{"name": "Carcará", "text": "Você vai passar por cidades de Alagoas enfrentando os problemas ambientais e ajudando o meio-ambiente. Eu serei o seu guia durante essa jornada."},
+	{"name": "Carcará", "text": "Sua aventura começa aqui em Maravilha: animais do seu tempo, que são de Alagoas se perderam no período pré-histórico. Resgate eles!"},
+	{"name": "Carcará", "text": "Vá ao museu da cidade, e procure pelo guia do museu. Lá você saberá o que fazer!"}
 ]

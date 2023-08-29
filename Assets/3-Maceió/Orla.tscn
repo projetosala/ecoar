@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 5/4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=4]
+
+[node name="Orla" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, -24 )
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 576, 324 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 504, 56 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1152, 648 )
+
+[node name="Clouds1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -169, -109 )
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 576, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds1"]
+position = Vector2( 281, 37 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 576, 324 )
+
+[node name="Clouds3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 102, -76 )
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 576, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds3"]
+position = Vector2( 306, 20 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 576, 324 )
+
+[node name="Clouds2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 84, -113 )
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 576, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Clouds2"]
+position = Vector2( 68, 113 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1152, 324 )

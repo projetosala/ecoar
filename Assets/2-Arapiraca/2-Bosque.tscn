@@ -499,14 +499,14 @@ texto = "Bosque - Arapiraca"
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 885, 101 )
 frames = SubResource( 85 )
-frame = 6
+frame = 3
 playing = true
 
 [node name="Mototaxi2" type="AnimatedSprite" parent="."]
 position = Vector2( 4894, 143 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 86 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="ChangeArea" parent="Mototaxi2" instance=ExtResource( 28 )]
@@ -521,7 +521,7 @@ shape = SubResource( 87 )
 position = Vector2( -572, 135 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 86 )
-frame = 4
+frame = 1
 playing = true
 
 [connection signal="body_entered" from="Cenario/Node2D/Guia/Area2D" to="Cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_entered"]

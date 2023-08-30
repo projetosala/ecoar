@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/rainyhearts.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Menu/Creditos.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Songs/cidade1.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -11,6 +12,37 @@ font_data = ExtResource( 1 )
 size = 44
 font_data = ExtResource( 1 )
 
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 549, 307 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "creditos"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, 320 ), Vector2( 512, 832 ) ]
+}
+
 [node name="creditos" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,6 +51,9 @@ script = ExtResource( 2 )
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1763.0
+margin_right = 1254.0
+margin_bottom = 11400.0
 color = Color( 0, 0, 0, 0.588235 )
 
 [node name="Label" type="Label" parent="."]
@@ -26,10 +61,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -470.5
-margin_top = -165.0
-margin_right = 470.5
-margin_bottom = 165.0
+margin_left = -456.0
+margin_top = 404.0
+margin_right = 485.0
+margin_bottom = 771.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Assets do site itch.io
@@ -44,12 +79,60 @@ Kings and Pigs by Pixel Frog
 Free Sky Backgrounds by Free Game Assets (GUI, Sprite, Tilesets)"
 valign = 1
 
-[node name="Button" type="Button" parent="."]
-margin_left = 887.0
-margin_top = 539.0
-margin_right = 1004.0
-margin_bottom = 587.0
-custom_fonts/font = SubResource( 2 )
-text = "voltar"
+[node name="LabelInicial" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.0
+margin_top = -236.0
+margin_right = 485.0
+margin_bottom = 390.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Programadores:
+Alex da Silva Custódio
+Namur Sebastião da Silva
+Tiago Vinícius Guimarães Santos
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+Pixel Art:
+Gabriel Anderson Alves da Silva
+Alex da Silva Custódio
+
+Design, Roteiro e Logo:
+Carlos Eduardo Ferreira da Silva
+
+Música:
+Alex da Silva Custódio
+
+Orientador:
+Geraldo Ramires de Lima Júnior"
+valign = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 549, 307 )
+current = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" type="Button" parent="Camera2D"]
+margin_left = 384.0
+margin_top = -256.0
+margin_right = 507.0
+margin_bottom = -208.0
+custom_fonts/font = SubResource( 2 )
+text = "Voltar"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D"]
+position = Vector2( -512, -832 )
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "creditos"
+playback_speed = 0.35
+anims/RESET = SubResource( 3 )
+anims/creditos = SubResource( 4 )
+
+[connection signal="pressed" from="Camera2D/Button" to="." method="_on_Button_pressed"]

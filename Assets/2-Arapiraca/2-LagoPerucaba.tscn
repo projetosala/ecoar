@@ -877,7 +877,6 @@ stream = ExtResource( 31 )
 autoplay = true
 
 [node name="ChangeArea" parent="." instance=ExtResource( 23 )]
-world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="lago" type="TileMap" parent="ChangeArea"]
 scale = Vector2( 2, 2 )
@@ -2357,11 +2356,10 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 2
 frames = SubResource( 113 )
-frame = 3
+frame = 7
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]
-world_scene = "res://Assets/3-Maceió/MundauBebedouro.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/AnimatedSprite/ChangeArea"]
 position = Vector2( 52.5996, 40.8 )
@@ -2392,7 +2390,6 @@ tile_data = PoolIntArray( -1768962, 0, 0, -1441303, 0, 0, -1441079, 0, 0, -13756
 [node name="Death" parent="." instance=ExtResource( 23 )]
 position = Vector2( 6976, -352 )
 z_index = -1
-world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
 
 [node name="TileMap" type="TileMap" parent="Death"]
 position = Vector2( -6976, 352 )
@@ -2429,7 +2426,7 @@ position = Vector2( -533, 106 )
 scale = Vector2( 0.909091, 0.909091 )
 z_index = 3
 frames = SubResource( 116 )
-frame = 3
+frame = 4
 playing = true
 
 [connection signal="body_entered" from="Enemies/Enemy3/HitBox" to="Enemies/Enemy3" method="_on_HitBox_body_entered"]

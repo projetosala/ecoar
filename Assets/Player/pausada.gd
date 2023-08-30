@@ -8,8 +8,6 @@ func _on_voltar_pressed():
 	self.visible = false
 	
 
-func _on_opcoes_pressed():
-	print("opcoes")
 
 
 func _on_sair_pressed():

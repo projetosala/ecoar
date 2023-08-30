@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=123 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/tileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Player.tscn" type="PackedScene" id=2]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 6/6.png" type="Texture" id=15]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/4.png" type="Texture" id=16]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 2/1.png" type="Texture" id=17]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/preguica/preguica-estatua.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Utils/SalvarFase/SalvarFase.gd" type="Script" id=19]
 [ext_resource path="res://Assets/Utils/MovingPlatforms/movingPlataform-left-right.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/cave.png" type="Texture" id=21]
@@ -27,9 +27,6 @@
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre2.png" type="Texture" id=25]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre3.png" type="Texture" id=26]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/03/rupestre1.png" type="Texture" id=27]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig1.png" type="Texture" id=28]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig4.png" type="Texture" id=29]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/03/Enemies/pig/pig3.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Utils/Enemies/Enemy.gd" type="Script" id=31]
 [ext_resource path="res://Assets/Songs/menu.wav" type="AudioStream" id=32]
 [ext_resource path="res://Assets/carcara/parado/carcara4.png" type="Texture" id=33]
@@ -38,27 +35,41 @@
 [ext_resource path="res://Assets/carcara/parado/carcara1.png" type="Texture" id=36]
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/DialogueBox.tscn" type="PackedScene" id=37]
 [ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/areaPreguica.gd" type="Script" id=38]
-[ext_resource path="res://Assets/1-Maravilha/Tiles/02/guia.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Utils/Passaro/PassaroColetavel.gd" type="Script" id=39]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro3.png" type="Texture" id=40]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro4.png" type="Texture" id=41]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro2.png" type="Texture" id=42]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro1.png" type="Texture" id=43]
+[ext_resource path="res://Assets/1-Maravilha/Info-Passaro.gd" type="Script" id=44]
+[ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=45]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/mane-mago/passaro1.png" type="Texture" id=46]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/mane-mago/passaro2.png" type="Texture" id=47]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/mane-mago/passaro4.png" type="Texture" id=48]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/mane-mago/passaro3.png" type="Texture" id=49]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/extravagante/passaro1.png" type="Texture" id=50]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/extravagante/passaro2.png" type="Texture" id=51]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/extravagante/passaro4.png" type="Texture" id=52]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/extravagante/passaro3.png" type="Texture" id=53]
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 15.5, 8 )
+extents = Vector2( 15.5, 14 )
 
 [sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ ExtResource( 28 ), ExtResource( 18 ), ExtResource( 30 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "walk",
 "speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 13.3333, 7.33333 )
+extents = Vector2( 20, 7.33333 )
 
 [sub_resource type="RectangleShape2D" id=24]
-extents = Vector2( 2.5, 6 )
+extents = Vector2( 2.5, 13 )
 
 [sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 2.5, 6.21875 )
+extents = Vector2( 2.5, 13.1094 )
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -483,7 +494,7 @@ extents = Vector2( 9, 243 )
 extents = Vector2( 468, 47.5 )
 
 [sub_resource type="RectangleShape2D" id=45]
-extents = Vector2( 1381, 33 )
+extents = Vector2( 1453, 33 )
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 16, 36 )
@@ -753,6 +764,153 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="DynamicFont" id=72]
+size = 30
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=73]
+size = 26
+font_data = ExtResource( 22 )
+
+[sub_resource type="SpriteFrames" id=74]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=68]
+animations = [ {
+"frames": [ ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 10.5, 8.5 )
+
+[sub_resource type="Animation" id=70]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 680, -254 ) ]
+}
+
+[sub_resource type="Animation" id=71]
+resource_name = "passaro"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 682, -176 ), Vector2( 680, -254 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=75]
+animations = [ {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=76]
+animations = [ {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=77]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 682, -176 ) ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "mane-mago"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 682, -176 ), Vector2( 678, -286 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=79]
+animations = [ {
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=80]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 682, -176 ) ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "extravagante"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 682, -176 ), Vector2( 672, -248 ) ]
+}
+
 [node name="1-Caatinga" type="Node2D"]
 script = ExtResource( 19 )
 __meta__ = {
@@ -769,7 +927,7 @@ script = ExtResource( 31 )
 speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2( -0.5, 9 )
+position = Vector2( -0.5, -1 )
 shape = SubResource( 21 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy"]
@@ -786,20 +944,21 @@ enabled = true
 cast_to = Vector2( 0, 24 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Enemy"]
+position = Vector2( -6.5, 1 )
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 22 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy"]
 modulate = Color( 0, 1, 0.0431373, 1 )
-position = Vector2( 0, -2 )
+position = Vector2( -6.5, -15 )
 scale = Vector2( 0.75, 0.75 )
 collision_layer = 64
 collision_mask = 2
 
 [node name="Collision" type="CollisionShape2D" parent="Enemy/HitBox"]
-position = Vector2( 0, -3.33333 )
+position = Vector2( 6.66663, -3.33334 )
 shape = SubResource( 23 )
 
 [node name="HurtBox" type="Area2D" parent="Enemy"]
@@ -809,7 +968,7 @@ collision_layer = 32
 collision_mask = 2
 
 [node name="Collision1" type="CollisionShape2D" parent="Enemy/HurtBox"]
-position = Vector2( -10.5, 0 )
+position = Vector2( -10.5, -7 )
 shape = SubResource( 24 )
 
 [node name="HurtBox2" type="Area2D" parent="Enemy"]
@@ -819,7 +978,7 @@ collision_layer = 128
 collision_mask = 2
 
 [node name="Collision2" type="CollisionShape2D" parent="Enemy/HurtBox2"]
-position = Vector2( 10.5, 0 )
+position = Vector2( 10.5, -6.89063 )
 shape = SubResource( 25 )
 
 [node name="Enemy2" type="KinematicBody2D" parent="."]
@@ -850,7 +1009,6 @@ cast_to = Vector2( 0, 24 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy2"]
 frames = SubResource( 22 )
 animation = "walk"
-frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemy2"]
@@ -1062,7 +1220,7 @@ position = Vector2( 577, 11 )
 world_scene = "res://Assets/1-Maravilha/1-Caatinga.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeArea4"]
-position = Vector2( 4626, 76 )
+position = Vector2( 4698, 76 )
 shape = SubResource( 45 )
 
 [node name="ChangeArea5" parent="." instance=ExtResource( 5 )]
@@ -1083,7 +1241,6 @@ shape = SubResource( 51 )
 
 [node name="Death" parent="." instance=ExtResource( 5 )]
 position = Vector2( 6976, -352 )
-world_scene = "res://Assets/1-Maravilha/1-Caatinga.tscn"
 
 [node name="TileMap" type="TileMap" parent="Death"]
 position = Vector2( -6976, 352 )
@@ -1234,16 +1391,281 @@ script = ExtResource( 38 )
 position = Vector2( 5.83333, -90 )
 shape = SubResource( 67 )
 
-[node name="Guia" type="Sprite" parent="cenario/Node2D/Guia"]
-position = Vector2( 698, 163 )
-scale = Vector2( 1.4, 1.4 )
-z_index = -2
-texture = ExtResource( 39 )
-
 [node name="carcara" type="AnimatedSprite" parent="cenario/Node2D"]
 frames = SubResource( 66 )
-frame = 3
+frame = 1
 playing = true
+
+[node name="passaros" type="Node2D" parent="."]
+
+[node name="cardeal-do-nordeste" type="Node2D" parent="passaros"]
+
+[node name="Info-Passaro" type="CanvasLayer" parent="passaros/cardeal-do-nordeste"]
+visible = false
+script = ExtResource( 44 )
+
+[node name="Node2D" type="Node2D" parent="passaros/cardeal-do-nordeste/Info-Passaro"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D"]
+margin_left = 172.0
+margin_top = 66.0
+margin_right = 678.0
+margin_bottom = 382.0
+rect_scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 24 )
+region_rect = Rect2( -0.0205765, 0.207284, 32.0206, 31.7191 )
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 4
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 167.143
+margin_top = 15.0
+margin_right = 418.143
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Pássaro Resgatado!!!"
+
+[node name="Name2" type="Label" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 36.4286
+margin_top = 41.4286
+margin_right = 478.429
+margin_bottom = 78.4286
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Galo de Campina ou Cardeal do Nordeste"
+
+[node name="Name3" type="Label" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect"]
+anchor_left = 0.266798
+anchor_top = 0.259494
+anchor_right = 8.96443
+anchor_bottom = 0.797468
+margin_left = -16.4285
+margin_top = -1.28571
+margin_right = -4035.43
+margin_bottom = 225.714
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 73 )
+text = "É uma ave icônica que habita o sertão alagoano, dentre outras regiões do Nordeste do Brasil. Com sua plumagem vibrante e elegante, é um símbolo da fauna nordestina. Sua melodia distinta, um canto característico e melodioso, ressoa pelos campos áridos, proporcionando uma trilha sonora única para a paisagem seca do sertão alagoano. É adaptada às condições desafiadoras do ambiente."
+autowrap = true
+
+[node name="passaro" type="AnimatedSprite" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 67.1429, 93.5714 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 74 )
+frame = 1
+playing = true
+
+[node name="button" type="TouchScreenButton" parent="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 437.857, 25.7143 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 45 )
+
+[node name="PassaroColetavel" type="Area2D" parent="passaros/cardeal-do-nordeste"]
+position = Vector2( 680, -254 )
+scale = Vector2( 1.8, 1.8 )
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Passaro" type="AnimatedSprite" parent="passaros/cardeal-do-nordeste/PassaroColetavel"]
+frames = SubResource( 68 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passaros/cardeal-do-nordeste/PassaroColetavel"]
+position = Vector2( -0.5, 4.5 )
+shape = SubResource( 69 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="passaros/cardeal-do-nordeste/PassaroColetavel"]
+autoplay = "passaro"
+playback_speed = 1.8
+anims/RESET = SubResource( 70 )
+anims/passaro = SubResource( 71 )
+
+[node name="mane-mago" type="Node2D" parent="passaros"]
+position = Vector2( 170, -34 )
+
+[node name="Info-Passaro" type="CanvasLayer" parent="passaros/mane-mago"]
+visible = false
+script = ExtResource( 44 )
+
+[node name="Node2D" type="Node2D" parent="passaros/mane-mago/Info-Passaro"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="passaros/mane-mago/Info-Passaro/Node2D"]
+margin_left = 172.0
+margin_top = 66.0
+margin_right = 678.0
+margin_bottom = 382.0
+rect_scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 24 )
+region_rect = Rect2( -0.0205765, 0.207284, 32.0206, 31.7191 )
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 4
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 167.143
+margin_top = 15.0
+margin_right = 418.143
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Pássaro Resgatado!!!"
+
+[node name="Name2" type="Label" parent="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 36.4286
+margin_top = 41.4286
+margin_right = 478.429
+margin_bottom = 78.4286
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Típio ou Mané Mago"
+
+[node name="Name3" type="Label" parent="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect"]
+anchor_left = 0.266798
+anchor_top = 0.259494
+anchor_right = 8.96443
+anchor_bottom = 0.797468
+margin_left = -23.5712
+margin_top = -14.8572
+margin_right = -4025.57
+margin_bottom = 212.143
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 73 )
+text = "O típio, mede 12,5 cm e se diferencia dos canários-da-terra por possuir desenho amarelo ao redor dos olhos e no bico. Machos têm garganta e ventre amarelos, contrastando com peito cinza e manto estriado. Fêmeas são parecidas, porém com menos amarelo. Seu canto melódico flui do agudo ao grave, lembrando trinados suaves do canário-do-reino. Costuma cantar em voo, planando com as asas inclinadas e cauda aberta."
+autowrap = true
+
+[node name="passaro" type="AnimatedSprite" parent="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 67.1429, 93.5714 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 75 )
+playing = true
+
+[node name="button" type="TouchScreenButton" parent="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 437.857, 25.7143 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 45 )
+
+[node name="PassaroColetavel" type="Area2D" parent="passaros/mane-mago"]
+position = Vector2( 682, -176 )
+scale = Vector2( 1.8, 1.8 )
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="passaro" type="AnimatedSprite" parent="passaros/mane-mago/PassaroColetavel"]
+frames = SubResource( 76 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passaros/mane-mago/PassaroColetavel"]
+position = Vector2( -0.5, 4.5 )
+shape = SubResource( 69 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="passaros/mane-mago/PassaroColetavel"]
+autoplay = "mane-mago"
+playback_speed = 1.6
+anims/RESET = SubResource( 77 )
+anims/mane-mago = SubResource( 78 )
+
+[node name="extravagante" type="Node2D" parent="passaros"]
+
+[node name="Info-Passaro" type="CanvasLayer" parent="passaros/extravagante"]
+visible = false
+script = ExtResource( 44 )
+
+[node name="Node2D" type="Node2D" parent="passaros/extravagante/Info-Passaro"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="passaros/extravagante/Info-Passaro/Node2D"]
+margin_left = 172.0
+margin_top = 66.0
+margin_right = 678.0
+margin_bottom = 382.0
+rect_scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 24 )
+region_rect = Rect2( -0.0205765, 0.207284, 32.0206, 31.7191 )
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 4
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="passaro" type="AnimatedSprite" parent="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 60, 95.7143 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 79 )
+frame = 2
+playing = true
+
+[node name="Name" type="Label" parent="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 167.143
+margin_top = 15.0
+margin_right = 418.143
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Pássaro Resgatado!!!"
+
+[node name="Name2" type="Label" parent="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect"]
+margin_left = 36.4286
+margin_top = 41.4286
+margin_right = 478.429
+margin_bottom = 78.4286
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Extravagante ou Golinho"
+
+[node name="Name3" type="Label" parent="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect"]
+anchor_left = 0.266798
+anchor_top = 0.259494
+anchor_right = 8.96443
+anchor_bottom = 0.797468
+margin_left = -29.2855
+margin_top = 2.28561
+margin_right = -4031.29
+margin_bottom = 229.286
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 73 )
+text = "O golinho, uma ave da família Thraupidae, também chamado de brejal, patativa, golado, golinha, coleira-garganta-branca, entre outros nomes regionais, pertence ao gênero Sporophila. Assim como outros membros desse gênero, é comumente referido como \"papa-capim\" devido à sua afinidade por sementes."
+autowrap = true
+
+[node name="button" type="TouchScreenButton" parent="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect"]
+position = Vector2( 437.857, 25.7143 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 45 )
+
+[node name="PassaroColetavel" type="Area2D" parent="passaros/extravagante"]
+position = Vector2( 682, -176 )
+scale = Vector2( 1.8, 1.8 )
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="passaro" type="AnimatedSprite" parent="passaros/extravagante/PassaroColetavel"]
+position = Vector2( 190, 0 )
+frames = SubResource( 79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="passaros/extravagante/PassaroColetavel"]
+position = Vector2( 190, 4.44444 )
+shape = SubResource( 69 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="passaros/extravagante/PassaroColetavel"]
+autoplay = "extravagante"
+playback_speed = 1.6
+anims/RESET = SubResource( 80 )
+anims/extravagante = SubResource( 81 )
 
 [connection signal="body_entered" from="Enemy/HitBox" to="Enemy" method="_on_HitBox_body_entered"]
 [connection signal="body_entered" from="Enemy/HurtBox" to="Enemy" method="_on_HurtBox_body_entered"]
@@ -1253,3 +1675,9 @@ playing = true
 [connection signal="body_entered" from="Enemy2/HurtBox2" to="Enemy2" method="_on_HurtBox2_body_entered"]
 [connection signal="body_entered" from="cenario/Node2D/Guia/Area2D" to="cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="cenario/Node2D/Guia/Area2D" to="cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="passaros/cardeal-do-nordeste/Info-Passaro/Node2D/NinePatchRect/button" to="passaros/cardeal-do-nordeste/Info-Passaro" method="_on_button_pressed"]
+[connection signal="body_entered" from="passaros/cardeal-do-nordeste/PassaroColetavel" to="passaros/cardeal-do-nordeste/PassaroColetavel" method="_on_PassaroColetavel_body_entered"]
+[connection signal="pressed" from="passaros/mane-mago/Info-Passaro/Node2D/NinePatchRect/button" to="passaros/mane-mago/Info-Passaro" method="_on_button_pressed"]
+[connection signal="body_entered" from="passaros/mane-mago/PassaroColetavel" to="passaros/mane-mago/PassaroColetavel" method="_on_PassaroColetavel_body_entered"]
+[connection signal="pressed" from="passaros/extravagante/Info-Passaro/Node2D/NinePatchRect/button" to="passaros/extravagante/Info-Passaro" method="_on_button_pressed"]
+[connection signal="body_entered" from="passaros/extravagante/PassaroColetavel" to="passaros/extravagante/PassaroColetavel" method="_on_PassaroColetavel_body_entered"]

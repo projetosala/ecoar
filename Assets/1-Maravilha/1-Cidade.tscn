@@ -197,6 +197,7 @@ autoplay = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 frames = SubResource( 1 )
 animation = "jump"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -302,17 +303,10 @@ custom_fonts/font = SubResource( 10 )
 action_mode = 0
 text = "VOLTAR"
 
-[node name="opcoes" type="Button" parent="Player/pause/pausada/ColorRect/VBoxContainer"]
+[node name="sair" type="Button" parent="Player/pause/pausada/ColorRect/VBoxContainer"]
 margin_top = 36.0
 margin_right = 119.0
 margin_bottom = 68.0
-custom_fonts/font = SubResource( 10 )
-text = "OPÇÕES"
-
-[node name="sair" type="Button" parent="Player/pause/pausada/ColorRect/VBoxContainer"]
-margin_top = 72.0
-margin_right = 119.0
-margin_bottom = 104.0
 custom_fonts/font = SubResource( 10 )
 text = "SAIR"
 
@@ -337,7 +331,6 @@ tile_data = PoolIntArray( -196494, 12, 0, -196493, 12, 1, -196492, 12, 1, -19649
 [node name="carcara" type="AnimatedSprite" parent="Cenario"]
 position = Vector2( 4422, 30 )
 frames = SubResource( 11 )
-frame = 3
 playing = true
 
 [node name="House" type="Sprite" parent="Cenario"]
@@ -554,7 +547,6 @@ visible = false
 texto = "Maravilha - Alagoas"
 
 [connection signal="pressed" from="Player/pause/pausada/ColorRect/VBoxContainer/voltar" to="Player/pause/pausada" method="_on_voltar_pressed"]
-[connection signal="pressed" from="Player/pause/pausada/ColorRect/VBoxContainer/opcoes" to="Player/pause/pausada" method="_on_opcoes_pressed"]
 [connection signal="pressed" from="Player/pause/pausada/ColorRect/VBoxContainer/sair" to="Player/pause/pausada" method="_on_sair_pressed"]
 [connection signal="body_entered" from="Cenario/Preguica/Carcará/Area2D" to="Cenario/Preguica/Carcará/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cenario/Preguica/Carcará/Area2D" to="Cenario/Preguica/Carcará/Area2D" method="_on_Area2D_body_exited"]

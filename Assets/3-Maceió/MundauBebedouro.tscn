@@ -648,7 +648,7 @@ shape = SubResource( 69 )
 position = Vector2( -153.333, -0.833328 )
 z_as_relative = false
 frames = SubResource( 70 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="redemoinho" type="AnimatedSprite" parent="."]
@@ -656,7 +656,7 @@ position = Vector2( 29, 120 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 1
 frames = SubResource( 2 )
-frame = 5
+frame = 13
 playing = true
 
 [node name="animacao-inicial" type="AnimationPlayer" parent="."]

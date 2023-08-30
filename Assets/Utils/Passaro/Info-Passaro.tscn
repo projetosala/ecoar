@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Fonts/Axolotl.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/1-Maravilha/Diálogos/Preguica/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro4.png" type="Texture" id=4]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/1-Maravilha/Tiles/cardeal-do-nordeste/passaro1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Player/UI/move-buttons/Information.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=72]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=73]
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=74]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Info-Passaro" type="CanvasLayer"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D"]
+margin_left = 172.0
+margin_top = 66.0
+margin_right = 678.0
+margin_bottom = 382.0
+rect_scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 2 )
+region_rect = Rect2( -0.0205765, 0.207284, 32.0206, 31.7191 )
+patch_margin_left = 4
+patch_margin_top = 2
+patch_margin_right = 4
+patch_margin_bottom = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Name" type="Label" parent="Node2D/NinePatchRect"]
+margin_left = 167.143
+margin_top = 15.0
+margin_right = 418.143
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Pássaro Resgatado!!!"
+
+[node name="Name2" type="Label" parent="Node2D/NinePatchRect"]
+margin_left = 36.4286
+margin_top = 41.4286
+margin_right = 478.429
+margin_bottom = 78.4286
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 72 )
+text = "Galo de Campina ou Cardeal do Nordeste"
+
+[node name="Name3" type="Label" parent="Node2D/NinePatchRect"]
+anchor_left = 0.266798
+anchor_top = 0.259494
+anchor_right = 8.96443
+anchor_bottom = 0.797468
+margin_left = -16.4285
+margin_top = -1.28571
+margin_right = -4035.43
+margin_bottom = 225.714
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 73 )
+text = "É uma ave icônica que habita o sertão alagoano, dentre outras regiões do Nordeste do Brasil. Com sua plumagem vibrante e elegante, é um símbolo da fauna nordestina. Sua melodia distinta, um canto característico e melodioso, ressoa pelos campos áridos, proporcionando uma trilha sonora única para a paisagem seca do sertão alagoano. É adaptada às condições desafiadoras do ambiente."
+autowrap = true
+
+[node name="passaro" type="AnimatedSprite" parent="Node2D/NinePatchRect"]
+position = Vector2( 67.1429, 93.5714 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 74 )
+frame = 3
+playing = true
+
+[node name="button" type="TouchScreenButton" parent="Node2D/NinePatchRect"]
+position = Vector2( 437.857, 25.7143 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 7 )

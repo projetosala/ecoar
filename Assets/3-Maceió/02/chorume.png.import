@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset.png-9cb9c0337aa0ea6cb398cb87f0536d8f.stex"
+path="res://.import/chorume.png-37e6f489e05818199d93d20e42c145ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3-Maceió/02/tileset.png"
-dest_files=[ "res://.import/tileset.png-9cb9c0337aa0ea6cb398cb87f0536d8f.stex" ]
+source_file="res://Assets/3-Maceió/02/chorume.png"
+dest_files=[ "res://.import/chorume.png-37e6f489e05818199d93d20e42c145ad.stex" ]
 
 [params]
 

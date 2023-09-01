@@ -47,12 +47,17 @@ func next_script():
 
 func _on_Timer_timeout():
 	var barco = get_parent().get_parent().get_node("AnimationPlayer")
+	var boss = get_parent().get_node("boss")
 	if barco:
 		barco.play("barco-anim")
 	var mototaxi = get_parent().get_node("Mototaxi")
 	if mototaxi:
 		SceneTransition.change_scene("dissolve")
 		get_tree().change_scene(world_scene)
+	if boss:
+		SceneTransition.change_scene("dissolve")
+		boss.queue_free()
+		
 	var pl = get_parent().get_parent().get_parent().get_parent().get_node("Player")
 	pl.canMove = true
 	pl.get_node("MovementButtons").visible = true 

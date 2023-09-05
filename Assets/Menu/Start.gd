@@ -2,6 +2,9 @@ extends Control
 
 export var mutado = false
 
+func _ready():
+	Global.checkpoint = false
+
 func _on_StartEnter_pressed():
 	var file = File.new()
 	if file.file_exists("user://save.dat"):

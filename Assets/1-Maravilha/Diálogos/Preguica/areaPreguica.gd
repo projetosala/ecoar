@@ -21,6 +21,7 @@ func use_dialog():
 		
 
 func _on_Area2D_body_entered(body) -> void:
+	print("entrou")
 	if body.is_in_group("player"):
 		use_dialog()
 		body.get_node("MovementButtons").visible = false
@@ -30,5 +31,4 @@ func _on_Area2D_body_entered(body) -> void:
 		body.get_node("AnimatedSprite").play("idle")
 		
 func _on_Area2D_body_exited(body: Player):
-	
 	queue_free()

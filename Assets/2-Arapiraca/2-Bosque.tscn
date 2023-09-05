@@ -467,8 +467,21 @@ shape = SubResource( 88 )
 [node name="carcara" type="AnimatedSprite" parent="Cenario/Node2D"]
 position = Vector2( -153.333, -0.833328 )
 frames = SubResource( 89 )
-frame = 1
+frame = 2
 playing = true
+
+[node name="Morador" type="KinematicBody2D" parent="Cenario/Node2D"]
+
+[node name="DialogueBox" parent="Cenario/Node2D/Morador" instance=ExtResource( 35 )]
+d_file = "res://Assets/2-Arapiraca/Diálogos/Morador-Comum/morador2.json"
+
+[node name="Area2D" type="Area2D" parent="Cenario/Node2D/Morador"]
+position = Vector2( 837.5, 32.5 )
+script = ExtResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Node2D/Morador/Area2D"]
+position = Vector2( 5.15387, -46.6026 )
+shape = SubResource( 88 )
 
 [node name="tree-arapiraca2" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
@@ -499,14 +512,14 @@ texto = "Bosque - Arapiraca"
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 885, 101 )
 frames = SubResource( 85 )
-frame = 5
+frame = 1
 playing = true
 
 [node name="Mototaxi2" type="AnimatedSprite" parent="."]
 position = Vector2( 4894, 143 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 86 )
-frame = 5
+frame = 2
 playing = true
 
 [node name="ChangeArea" parent="Mototaxi2" instance=ExtResource( 28 )]
@@ -521,8 +534,10 @@ shape = SubResource( 87 )
 position = Vector2( -572, 135 )
 scale = Vector2( 0.909091, 0.909091 )
 frames = SubResource( 86 )
-frame = 5
+frame = 2
 playing = true
 
 [connection signal="body_entered" from="Cenario/Node2D/Guia/Area2D" to="Cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cenario/Node2D/Guia/Area2D" to="Cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Cenario/Node2D/Morador/Area2D" to="Cenario/Node2D/Morador/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Cenario/Node2D/Morador/Area2D" to="Cenario/Node2D/Morador/Area2D" method="_on_Area2D_body_exited"]

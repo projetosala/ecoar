@@ -278,7 +278,7 @@ position = Vector2( 258, 139 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="npcs"]
@@ -286,7 +286,7 @@ position = Vector2( 321, 137 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="npcs"]
@@ -294,7 +294,7 @@ position = Vector2( 370, 136 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="npcs"]
@@ -302,7 +302,7 @@ position = Vector2( 413, 138 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="npcs"]
@@ -310,7 +310,7 @@ position = Vector2( 649, 127 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite7" type="AnimatedSprite" parent="npcs"]
@@ -318,19 +318,20 @@ position = Vector2( 1187, 133 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite8" type="AnimatedSprite" parent="npcs"]
 position = Vector2( 1172, 133 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
+frame = 3
 playing = true
 
 [node name="chip" type="AnimatedSprite" parent="npcs"]
 position = Vector2( 944, 126 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
+frame = 3
 playing = true
 
 [node name="Guia" type="KinematicBody2D" parent="npcs/chip"]
@@ -351,7 +352,6 @@ position = Vector2( 1290, 134 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite11" type="AnimatedSprite" parent="npcs"]
@@ -360,6 +360,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "azul"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite12" type="AnimatedSprite" parent="npcs"]
@@ -368,7 +369,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite13" type="AnimatedSprite" parent="npcs"]
@@ -377,7 +378,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite14" type="AnimatedSprite" parent="npcs"]
@@ -386,7 +387,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite15" type="AnimatedSprite" parent="npcs"]
@@ -395,7 +396,6 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite16" type="AnimatedSprite" parent="npcs"]
@@ -403,6 +403,7 @@ position = Vector2( 1850, 127 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite17" type="AnimatedSprite" parent="npcs"]
@@ -410,6 +411,7 @@ position = Vector2( 1718, 137 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
+frame = 3
 playing = true
 
 [node name="AnimatedSprite18" type="AnimatedSprite" parent="npcs"]
@@ -417,14 +419,14 @@ position = Vector2( 1766, 139 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite19" type="AnimatedSprite" parent="npcs"]
 position = Vector2( 2035, 126 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite20" type="AnimatedSprite" parent="npcs"]
@@ -432,7 +434,6 @@ position = Vector2( 2336, 140 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite21" type="AnimatedSprite" parent="npcs"]
@@ -441,7 +442,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "azul"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite22" type="AnimatedSprite" parent="npcs"]
@@ -450,7 +451,6 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "azul"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite23" type="AnimatedSprite" parent="npcs"]
@@ -459,7 +459,6 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "azul"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite24" type="AnimatedSprite" parent="npcs"]
@@ -468,6 +467,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "azul"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite25" type="AnimatedSprite" parent="npcs"]
@@ -476,7 +476,6 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite26" type="AnimatedSprite" parent="npcs"]
@@ -485,6 +484,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite27" type="AnimatedSprite" parent="npcs"]
@@ -493,6 +493,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite28" type="AnimatedSprite" parent="npcs"]
@@ -501,7 +502,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite29" type="AnimatedSprite" parent="npcs"]
@@ -509,7 +510,7 @@ position = Vector2( 2837, 132 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite30" type="AnimatedSprite" parent="npcs"]
@@ -518,7 +519,7 @@ scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite31" type="AnimatedSprite" parent="npcs"]
@@ -526,7 +527,7 @@ position = Vector2( 3307, 124 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "verde"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite32" type="AnimatedSprite" parent="npcs"]
@@ -534,6 +535,7 @@ position = Vector2( 3332, 123 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
+frame = 3
 playing = true
 flip_h = true
 
@@ -542,6 +544,7 @@ position = Vector2( 3863, 131 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
+frame = 3
 playing = true
 flip_h = true
 
@@ -550,7 +553,7 @@ position = Vector2( 3983, 130 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 17 )
 animation = "azul"
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimatedSprite35" type="AnimatedSprite" parent="npcs"]
@@ -558,7 +561,6 @@ position = Vector2( 4021, 139 )
 scale = Vector2( 1.69, 1.69 )
 z_index = 1
 frames = SubResource( 17 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="npcs"]
@@ -566,6 +568,7 @@ position = Vector2( 233, 154 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 1
 frames = SubResource( 17 )
+frame = 3
 playing = true
 
 [node name="CityBanner" parent="." instance=ExtResource( 17 )]
@@ -576,7 +579,7 @@ position = Vector2( 32, 184 )
 scale = Vector2( 0.909091, 0.909091 )
 z_index = 3
 frames = SubResource( 15 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Mototaxi2" type="AnimatedSprite" parent="."]
@@ -584,12 +587,12 @@ position = Vector2( 4423, 203 )
 scale = Vector2( 0.909091, 0.909091 )
 z_index = 3
 frames = SubResource( 15 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="ChangeArea" parent="Mototaxi2" instance=ExtResource( 19 )]
 position = Vector2( -4.40039, -42.9 )
-world_scene = "res://Assets/2-Arapiraca/2-LagoPerucaba.tscn"
+world_scene = "res://Assets/2-Arapiraca/2-Bosque.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mototaxi2/ChangeArea"]
 position = Vector2( 24.2007, 31.9 )
@@ -743,7 +746,7 @@ shape = SubResource( 18 )
 [node name="carcara" type="AnimatedSprite" parent="Cenario/Node2D"]
 position = Vector2( -153.333, -0.833328 )
 frames = SubResource( 19 )
-frame = 2
+frame = 1
 playing = true
 
 [connection signal="body_entered" from="npcs/chip/Guia/Area2D" to="npcs/chip/Guia/Area2D" method="_on_Area2D_body_entered"]

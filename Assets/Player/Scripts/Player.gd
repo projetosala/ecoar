@@ -20,7 +20,7 @@ func removeHeart(life):
 	else:
 		$heart3.play("heart_black")
 		get_tree().reload_current_scene()
-		
+
 func _physics_process(delta):
 	motion.y += gravity
 	var friction = false

@@ -6,11 +6,11 @@ var gravity = 1200
 var velocity = Vector2.ZERO
 var direction = -1
 var hitted = false
+export var isBoss = false
 
 func _physics_process(delta: float) -> void:
 	velocity.x = speed * direction
 	velocity.y += gravity * delta
-	
 	if direction == 1:
 		$Sprite.flip_h = false
 	else: 
@@ -35,9 +35,17 @@ func _on_HitBox_body_entered(body: Player) -> void:
 	body.motion.y -= 150
 	yield(get_tree().create_timer(0.1), "timeout")
 	hitted = false
+	if isBoss:
+		body.canMove = false
+		body.motion.x = 0
+		body.get_node("AnimatedSprite").play("idle")
+		queue_free()
+		get_parent().get_node("cenario/carcara-final/AnimationPlayer").play("carcara-ending")
+		
 	if health == 0:
 		queue_free()
 		get_node("HitBox/Collision").set_deferred("disabled", true)
+	
 		
 
 func _on_HurtBox_body_entered(body: Player) -> void:

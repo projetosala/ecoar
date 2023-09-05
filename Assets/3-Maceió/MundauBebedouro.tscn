@@ -684,6 +684,7 @@ shape = SubResource( 69 )
 position = Vector2( -153.333, -0.833328 )
 z_as_relative = false
 frames = SubResource( 70 )
+frame = 3
 playing = true
 
 [node name="redemoinho" type="AnimatedSprite" parent="."]

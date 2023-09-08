@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/04/waterCorreta.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/2.png" type="Texture" id=2]
@@ -52,6 +52,8 @@
 [ext_resource path="res://Assets/2-Arapiraca/Tiles/postes.tres" type="TileSet" id=50]
 [ext_resource path="res://Assets/3-Maceió/01/trem.png" type="Texture" id=51]
 [ext_resource path="res://Assets/3-Maceió/trem-animacao.gd" type="Script" id=52]
+[ext_resource path="res://Assets/3-Maceió/01/trilho.png" type="Texture" id=53]
+[ext_resource path="res://Assets/3-Maceió/01/estacao.png" type="Texture" id=54]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9, 243 )
@@ -517,6 +519,20 @@ tracks/0/keys = {
 13/shape_one_way_margin = 0.0
 13/shapes = [  ]
 13/z_index = 0
+14/name = "estacao.png 14"
+14/texture = ExtResource( 54 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 14, 300, 50 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
 
 [sub_resource type="TileSet" id=68]
 0/name = "coqueiro.png 0"
@@ -567,6 +583,36 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=73]
 extents = Vector2( 151, 126.5 )
+
+[sub_resource type="TileSet" id=74]
+0/name = "estacao.png 0"
+0/texture = ExtResource( 54 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 14, 300, 50 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "trilho.png 1"
+1/texture = ExtResource( 53 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 32, 300, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = -1
 
 [node name="MundauBebedouro" type="Node2D"]
 script = ExtResource( 24 )
@@ -684,7 +730,7 @@ shape = SubResource( 69 )
 position = Vector2( -153.333, -0.833328 )
 z_as_relative = false
 frames = SubResource( 70 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="redemoinho" type="AnimatedSprite" parent="."]
@@ -692,7 +738,7 @@ position = Vector2( 29, 120 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 1
 frames = SubResource( 2 )
-frame = 13
+frame = 7
 playing = true
 
 [node name="animacao-inicial" type="AnimationPlayer" parent="."]
@@ -827,9 +873,8 @@ tile_data = PoolIntArray( -3472958, 2, 0, -3472899, 2, 0, -3472845, 3, 0, -34074
 format = 1
 
 [node name="Trem" type="Sprite" parent="."]
-position = Vector2( 6529, -13 )
+position = Vector2( 6536, -16 )
 scale = Vector2( 2, 2 )
-z_index = -2
 texture = ExtResource( 51 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Trem"]
@@ -843,6 +888,13 @@ script = ExtResource( 52 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trem-animacao"]
 position = Vector2( 6840, 24 )
 shape = SubResource( 73 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 1.5, 1.5 )
+tile_set = SubResource( 74 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( 2066, 0, 0, 2216, 0, 0, 2366, 0, 0, 591890, 1, 0, 592040, 1, 0, 592190, 1, 0 )
 
 [connection signal="body_entered" from="cenario/Node2D/Guia/Area2D" to="cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="cenario/Node2D/Guia/Area2D" to="cenario/Node2D/Guia/Area2D" method="_on_Area2D_body_exited"]

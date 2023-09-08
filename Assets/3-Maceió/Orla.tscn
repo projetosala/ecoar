@@ -575,6 +575,7 @@ shape = SubResource( 21 )
 position = Vector2( -159.231, 13.8461 )
 z_as_relative = false
 frames = SubResource( 22 )
+frame = 2
 playing = true
 
 [node name="carcara-final" type="Node2D" parent="cenario"]
@@ -603,7 +604,7 @@ position = Vector2( -153.333, -0.833328 )
 z_as_relative = false
 frames = SubResource( 22 )
 animation = "voando"
-frame = 1
+frame = 7
 playing = true
 flip_h = true
 
@@ -634,7 +635,7 @@ shape = SubResource( 21 )
 [node name="boss" type="AnimatedSprite" parent="cenario/Node2D2/boss"]
 frames = SubResource( 26 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 flip_h = true
 
@@ -710,7 +711,7 @@ shape = SubResource( 32 )
 [node name="Sprite" type="AnimatedSprite" parent="Enemy"]
 frames = SubResource( 26 )
 animation = "run"
-frame = 13
+frame = 1
 playing = true
 flip_h = true
 

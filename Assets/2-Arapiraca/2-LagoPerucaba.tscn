@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=2]
+[gd_scene load_steps=134 format=2]
 
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/1-Maravilha/Tiles/01/Clouds/Clouds 1/4.png" type="Texture" id=2]
@@ -253,14 +253,17 @@ extents = Vector2( 166.563, 26.25 )
 [sub_resource type="RectangleShape2D" id=68]
 extents = Vector2( 30.0001, 30 )
 
-[sub_resource type="RectangleShape2D" id=71]
-extents = Vector2( 14.5455, 8.83741 )
+[sub_resource type="RectangleShape2D" id=117]
+extents = Vector2( 50.9095, 236.363 )
 
 [sub_resource type="RectangleShape2D" id=65]
 extents = Vector2( 11, 18.5 )
 
 [sub_resource type="RectangleShape2D" id=66]
 extents = Vector2( 43, 8 )
+
+[sub_resource type="RectangleShape2D" id=71]
+extents = Vector2( 14.5455, 8.83741 )
 
 [sub_resource type="Animation" id=72]
 length = 0.001
@@ -1096,7 +1099,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy3"]
@@ -1161,7 +1164,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy9"]
@@ -1225,7 +1228,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy10"]
@@ -1289,7 +1292,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy11"]
@@ -1353,6 +1356,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy12"]
@@ -1416,7 +1420,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy7"]
@@ -1480,6 +1484,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy8"]
@@ -1543,7 +1548,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 2
+frame = 5
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy4"]
@@ -1608,7 +1613,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
-frame = 1
+frame = 4
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy5"]
@@ -1673,6 +1678,7 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 1
 frames = SubResource( 101 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="HitBox" type="Area2D" parent="Enemies/Enemy6"]
@@ -1924,8 +1930,8 @@ scale = Vector2( 0.55, 0.55 )
 script = ExtResource( 26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Poluicao/Sprite/Area2D"]
-position = Vector2( 1881.82, 123.636 )
-shape = SubResource( 71 )
+position = Vector2( 1914.54, -69.0906 )
+shape = SubResource( 117 )
 
 [node name="PosteSemFio2" type="Sprite" parent="Cenario"]
 position = Vector2( 330, 57 )
@@ -2390,7 +2396,6 @@ position = Vector2( 8908, 172 )
 scale = Vector2( 2.5, 2.5 )
 z_index = 2
 frames = SubResource( 113 )
-frame = 13
 playing = true
 
 [node name="ChangeArea" parent="Cenario/AnimatedSprite" instance=ExtResource( 23 )]

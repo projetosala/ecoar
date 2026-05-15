@@ -1,0 +1,120 @@
+name: Release Web
+
+on:
+  push:
+    tags:
+      - 'web-v*.*.*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-web
+  cancel-in-progress: false
+
+env:
+  GODOT_VERSION: 3.5.1
+  BUILD_DIR: build/web
+
+jobs:
+  build-web:
+    name: Build Web
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:3.5.1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          lfs: true
+
+      - name: Prepare Godot environment
+        run: |
+          mkdir -p ~/.local/share/godot/templates
+          mkdir -p ~/.local/share/godot/export_templates
+          mkdir -p ~/.config
+
+          if [ -d /root/.config/godot ]; then
+            cp -R /root/.config/godot ~/.config/godot
+          fi
+
+          template_source="$(find /root /github/home -type d \( -path "*/templates/${GODOT_VERSION}.stable" -o -path "*/export_templates/${GODOT_VERSION}.stable" \) 2>/dev/null | head -n 1)"
+
+          if [ -z "${template_source}" ]; then
+            echo "Godot export templates for ${GODOT_VERSION}.stable were not found in the container."
+            find /root /github/home -type d \( -path "*/templates*" -o -path "*/export_templates*" \) 2>/dev/null || true
+            exit 1
+          fi
+
+          rm -rf ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+          rm -rf ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          cp -R "${template_source}" ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+          ln -s ~/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+
+      - name: Generate export presets
+        run: |
+          cp export_presets.template.cfg export_presets.cfg
+
+      - name: Export HTML5 build
+        run: |
+          git config --global --add safe.directory "$(pwd)"
+          mkdir -p "${BUILD_DIR}"
+          godot --path . --verbose --export "HTML5" "${BUILD_DIR}/index.html"
+          test -f "${BUILD_DIR}/index.html"
+          touch "${BUILD_DIR}/.nojekyll"
+
+      - name: Upload web build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-build
+          path: ${{ env.BUILD_DIR }}
+          if-no-files-found: error
+
+  deploy-web-branch:
+    name: Publish To Web Branch
+    runs-on: ubuntu-latest
+    needs: build-web
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Download web build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: web-build
+          path: .artifacts/web-build
+
+      - name: Commit build to web branch
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin web >/dev/null 2>&1; then
+            git worktree add --track -B web .deploy-web origin/web
+          else
+            git worktree add --detach .deploy-web
+            cd .deploy-web
+            git checkout --orphan web
+            cd ..
+          fi
+
+          find .deploy-web -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -R .artifacts/web-build/. .deploy-web/
+          touch .deploy-web/.nojekyll
+
+          cd .deploy-web
+          git add --all
+
+          if git diff --cached --quiet; then
+            echo "No changes to publish on branch web."
+            exit 0
+          fi
+
+          git commit -m "Deploy web build for ${TAG_NAME}"
+          git push origin HEAD:web

@@ -116,11 +116,15 @@ Autoloads configurados em `project.godot`:
 
 ### Pelo editor Godot
 
-1. Instale uma versão do **Godot 4.6** ou outra versão 4.x recentes
+1. Instale o **Godot 3.5.1** ou outra versão 3.5.x compatível
 2. Abra o Godot.
 3. Escolha `Import` e selecione o arquivo [`project.godot`](project.godot).
 4. Abra o projeto importado.
 5. Execute pela cena principal configurada no projeto
+
+## Release Web
+
+O fluxo automatizado de publicação web via tag está documentado em [`docs/release-web.md`](docs/release-web.md).
 
 ## Créditos
 

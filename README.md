@@ -122,6 +122,26 @@ Autoloads configurados em `project.godot`:
 4. Abra o projeto importado.
 5. Execute pela cena principal configurada no projeto
 
+## Créditos
+
+Os créditos abaixo foram transcritos da própria tela de créditos do jogo:
+
+- Programadores: Alex da Silva Custódio, Namur Sebastião da Silva e Tiago Vinícius Guimarães Santos;
+- Pixel Art: Gabriel Anderson Alves da Silva e Alex da Silva Custódio;
+- Design, roteiro e logo: Carlos Eduardo Ferreira da Silva;
+- Música: Alex da Silva Custódio;
+- Orientador: Geraldo Ramires de Lima Júnior.
+
+## Recursos De Terceiros
+
+O próprio jogo credita os seguintes assets externos, com origem em `itch.io`:
+
+- `Cave Platformer Tileset [16x16][FREE]` por RottingPixels;
+- `SunnyLand Enemies Pack 1` por ansimuz;
+- `Sunny Land - Pixel Game Art` por ansimuz;
+- `Kings and Pigs` por Pixel Frog;
+- `Free Sky Backgrounds` por Free Game Assets (GUI, Sprite, Tilesets).
+
 ## Licença
 
-Este projeto está sob a licença [`LICENSE`](LICENSE).
+O código deste repositório está acompanhado de [`LICENSE`](LICENSE). Recursos de terceiros mantêm seus respectivos créditos e eventuais termos próprios de uso.

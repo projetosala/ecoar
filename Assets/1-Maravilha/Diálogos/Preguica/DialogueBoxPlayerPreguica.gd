@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+const DialogueFallback = preload("res://Assets/Utils/DialogueFallback.gd")
+
 export (String, FILE, "*.json") var d_file
 export(String, FILE, "*.tscn") var world_scene
 
@@ -26,7 +28,10 @@ func load_dialogue():
 	var file = File.new()
 	if file.file_exists(d_file):
 		file.open(d_file, File.READ)
-		return parse_json(file.get_as_text())
+		var parsed_dialogue = parse_json(file.get_as_text())
+		if typeof(parsed_dialogue) == TYPE_ARRAY:
+			return parsed_dialogue
+	return DialogueFallback.DIALOGUES.get(d_file, [])
 		
 func _input(event):
 	if not d_active:

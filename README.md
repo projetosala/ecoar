@@ -148,4 +148,4 @@ O próprio jogo credita os seguintes assets externos, com origem em `itch.io`:
 
 ## Licença
 
-O código deste repositório está acompanhado de [`LICENSE`](LICENSE). Recursos de terceiros mantêm seus respectivos créditos e eventuais termos próprios de uso.
+O código deste repositório está acompanhado de [`MIT License`](LICENSE). Recursos de terceiros mantêm seus respectivos créditos e eventuais termos próprios de uso.
